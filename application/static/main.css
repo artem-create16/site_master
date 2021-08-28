@@ -471,6 +471,7 @@ header .wrapper {
     font-weight: bold;
 }
 
+
 .social-groups {
     width: 120px;
 }
@@ -499,6 +500,10 @@ a.insta, span.insta {
 
 .wrapper.top-menu-holder {
     position: relative;
+}
+
+.order-top .call-calc {
+    margin-right: 200px;
 }
 
 .call-calc {
@@ -558,7 +563,8 @@ a.insta, span.insta {
 .phone-top .phone {
     display: block;
     font: bold 24px Roboto;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-right: 170px;
 }
 
 .phone-top .name {
@@ -593,17 +599,22 @@ a.insta, span.insta {
 
     .logo {
         float: none;
-        margin: 8px auto;
+        margin: 15px 10px;
         width: 210px;
     }
 
     .logo img {
-        width: 200px;
+        width: 150px;
     }
 
-    .call-calc {
-        display: none;
+    .order-top .call-calc {
+        font: 500 14px/30px Roboto;
+        margin-right: 8px;
+        margin-top: -59px;
+        width: 169px;
+        margin-left: 150px;
     }
+
 }
 
 .phone .small {
@@ -4571,8 +4582,23 @@ table.arcticmodal-container_i {
 /*SWIPER*/
 
 .swiper {
-  width: 600px;
-  height: 300px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-slide .review-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right:10%;
+    transform: translate(0, -50%)
 }
 
 /*SWIPER*/
@@ -5492,6 +5518,7 @@ table.arcticmodal-container_i {
     line-height: 40px;
 }
 
+
 @media only screen and (max-width: 767px) {
     .action-modal-call {
         display: none;
@@ -5658,15 +5685,13 @@ table.arcticmodal-container_i {
         background: url(../img/menu-ico.png) no-repeat;
     }
 
-    .phone-top {
-        display: none;
+    .phone-top .phone {
+        font-size: 1rem;
         position: absolute;
         width: 100%;
-        box-sizing: border-box;
-        background: #fff;
-        text-align: center;
-        top: 70px;
-        right: 0px;
+        text-align: right;
+        top: 5px;
+        right: 15px;
         padding: 15px;
         margin: 0;
         z-index: 100;
