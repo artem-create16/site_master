@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["python", "./run.py"]
+CMD ["gunicorn", "-b0.0.0.0:8000", "run:app"]
