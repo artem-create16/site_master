@@ -4593,7 +4593,10 @@ table.arcticmodal-container_i {
     text-align: center;
 }
 
+
+
 .swiper-slide .review-text {
+    font-size: 4vmin;
     margin: 0;
     position: absolute;
     top: 50%;
