@@ -29,7 +29,6 @@ body {
 .wrapper {
     box-sizing: border-box;
     width: 940px;
-    padding: 20px;
     margin: 0px auto;
     min-height: 100%;
     background: #fff;
@@ -58,7 +57,7 @@ body {
 }
 
 a {
-    color: #248912;
+    color: #4e4e4e;
 }
 
 a:hover {
@@ -337,6 +336,8 @@ input.error {
 }
 
 header {
+    position: fixed;
+    z-index: 1000;
     background: #fff;
     width: 100%;
     min-width: 1244px;
@@ -1938,7 +1939,6 @@ footer {
     flex-wrap: wrap;
 }
 
-/*.footer-info .fi-row .col-md-4{padding:75px 15px 30px 15px;border-right: 1px solid rgba(255,255,255,0.10);border-bottom: 1px solid rgba(255,255,255,0.10);border-left: 1px solid rgba(255,255,255,0.10);margin-left: -1px;}*/
 .footer-info .fi-row .col-md-4 {
     padding: 75px 15px 30px 15px;
 }
@@ -1946,6 +1946,10 @@ footer {
 .footer-info .fi-row.no-title .col-md-4 {
     padding: 30px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.schedule {
+    margin: 10;
 }
 
 .footer-info .fi-row.no-title {
@@ -2040,27 +2044,6 @@ footer {
     position: absolute;
     bottom: -30px;
     right: 0px;
-}
-
-.sky {
-    width: 220px;
-    margin: 0 auto;
-}
-
-.sky a, .sky span {
-    display: inline;
-    font-size: 11px;
-    color: #fff;
-}
-
-.sky img {
-    float: left;
-    margin: 2px 8px 0px 0px;
-}
-
-.sky-txt {
-    font-size: 11px;
-    line-height: 17px;
 }
 
 .list-articles {
@@ -4581,11 +4564,29 @@ table.arcticmodal-container_i {
 
 /*SWIPER*/
 
+/*.swiper-button-next,*/
+/*.swiper-button-prev {*/
+/*    font-size: large !important;*/
+/*    background-color: white;*/
+/*    background-color: rgba(255, 255, 255, 0.5);*/
+/*    right:10px;*/
+/*    padding: 30px;*/
+/*    color: #000 !important;*/
+/*    fill: black !important;*/
+/*    stroke: black !important;*/
+/*}*/
+
+
+
 .swiper {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
     width: 80%
+}
+
+.swiper-button-next {
+    color: #248912;
 }
 
 .swiper-slide {
@@ -6594,4 +6595,140 @@ h3 {
   font-weight: 600;
   line-height: 2;
   text-transform: uppercase;
+  text-align: center;
+}
+
+/*FORM*/
+
+.title-offers h2 {
+    text-align: center;
+    width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+.contact-us, .contact-us:after, .contact-us:before {
+  box-sizing: border-box;
+}
+
+.contact-us body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #f1f3fb;
+  padding: 0 2rem;
+}
+
+.contact-us img {
+  max-width: 100%;
+  display: block;
+}
+
+.contact-us input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
+.contact-us {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+
+.contact-us .card-heading {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  right: 10%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #735400;
+  line-height: 1.222;
+}
+.contact-us .card-heading small {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  margin-top: 0.25em;
+}
+
+.contact-us .card-form {
+  padding: 0rem 6rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-us .card-form {
+        padding: 0;
+    }
+}
+
+.contact-us .input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+}
+.contact-us .input + .contact-us .input {
+  margin-top: 1.5rem;
+}
+
+.contact-us .input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.contact-us .input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
+}
+.contact-us .input-field:focus, .contact-us .input-field:valid {
+  outline: 0;
+  border-bottom-color: #6658d3;
+}
+.contact-us .input-field:focus + .input-label, .input-field:valid + .contact-us .input-label {
+  color: #6658d3;
+  transform: translateY(-1.5rem);
+}
+
+.contact-us .action {
+  margin-top: 2rem;
+}
+
+.contact-us .action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 1em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #6658d3;
+  border-radius: 6px;
+  color: #FFF;
+  border: 0;
+}
+.contact-us .action-button:focus {
+  outline: 0;
+}
+
+.contact-us .card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+}
+.contact-us .card-info a {
+  display: block;
+  color: #6658d3;
+  text-decoration: none;
 }
