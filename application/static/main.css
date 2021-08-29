@@ -610,8 +610,8 @@ a.insta, span.insta {
 
     .order-top .call-calc {
         font: 500 14px/30px Roboto;
-        margin-right: 8px;
-        margin-top: -59px;
+        margin-right: 0px;
+        margin-top: -61px;
         width: 169px;
         margin-left: 150px;
     }
@@ -5691,8 +5691,8 @@ table.arcticmodal-container_i {
         position: absolute;
         width: 100%;
         text-align: right;
-        top: 5px;
-        right: 15px;
+        top: 1px;
+        right: 4px;
         padding: 15px;
         margin: 0;
         z-index: 100;
@@ -6488,6 +6488,12 @@ table.arcticmodal-container_i {
     text-align: center;
 }
 
+@media only screen and (max-width: 768px){
+    .work-title h2 {
+    margin-top: -15px;
+    }
+}
+
 *, :before, :after {
   box-sizing: border-box;
   margin: 0;
@@ -6603,6 +6609,7 @@ h3 {
 .title-offers h2 {
     text-align: center;
     width: 100%;
+    margin-top: -60px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
@@ -6664,6 +6671,9 @@ h3 {
 @media only screen and (max-width: 768px) {
     .contact-us .card-form {
         padding: 0;
+    }
+    .title-offers h2 {
+        margin-top: -100px;
     }
 }
 
