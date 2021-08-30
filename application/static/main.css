@@ -292,7 +292,7 @@ table {
 }
 
 header {
-    position: fixed;
+    /*position: fixed;*/
     z-index: 1000;
     background: #fff;
     width: 100%;
@@ -313,7 +313,7 @@ header .wrapper {
 .logo {
     display: block;
     float: left;
-    margin: 22px 0 0 0;
+    margin: 4px 0 0 0;
     width: 210px;
 }
 
@@ -423,6 +423,11 @@ header .wrapper {
     font-weight: bold;
 }
 
+.partner {
+    font-weight: bold;
+    margin-left: -43px;
+}
+
 
 .social-groups {
     width: 120px;
@@ -455,7 +460,7 @@ a.insta, span.insta {
 }
 
 .order-top .call-calc {
-    margin-right: 200px;
+    margin-right: 100px;
 }
 
 .call-calc {
@@ -506,7 +511,7 @@ a.insta, span.insta {
     display: block;
     font: bold 24px Roboto;
     margin-top: 15px;
-    margin-right: 170px;
+    margin-right: 0px;
 }
 
 .phone-top .name {
@@ -541,7 +546,7 @@ a.insta, span.insta {
 
     .logo {
         float: none;
-        margin: 15px 10px;
+        margin: 15px -10px;
         width: 210px;
     }
 
@@ -574,7 +579,7 @@ a.insta, span.insta {
 
 .top-menu-holder .wrapper {
     position: relative;
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 110px;
     border: none
 }
 
@@ -1184,6 +1189,10 @@ footer {
     /* Menu */
     .top-menu {
         display: none;
+    }
+
+    .top-menu ul {
+
     }
 
     .mobile-menu {
