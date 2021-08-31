@@ -1,10 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../static/calculator.css">
+    <link rel="stylesheet" href="../static/main.css">
 </head>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <img src='../static/img/logo.jpg' alt='Мастер лого'/>
+        </div>
+
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с 8:00 до 19:00
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk' data-prefix='7495'>+7 (777) 777-77-77</span>
+        </div>
+    </div>
+
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href='/about/'>О нас</a></li>
+                <li><a href='/about/'>Услуги</a></li>
+                <li><a href="#">Виды роллет</a></li>
+                <li><a href='/action/'>Акции</a></li>
+                <li><a href='/gallery/'>Фото</a></li>
+                <li><a href='/contact/'>Контакты</a></li>
+
+            </ul>
+            <div class="order-top">
+                <a href="{{ url_for('calculator.calculator') }}" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+    <div class="top-menu-holder-after" style="display:none;height:72px;"></div>
+
+</header>
+
+
+<style>
+    #main-block {
+        height: 600px;
+        position: relative;
+    }
+
+    .text-block-holder {
+        /*width: 70%;*/
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 11;
+    }
+
+
+    .text-block {
+        position: relative;
+        z-index: 2;
+        padding: 11% 90px 0 90px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .text-block h1 span {
+        display: block;
+        margin-top: 5px;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 45px;
+    }
+
+    .text-block .sub-title {
+        margin-top: 25px;
+        font-size: 38px;
+        line-height: 45px;
+        text-transform: uppercase;
+        /*max-width: 570px;*/
+    }
+
+    .text-block .sub-title2 {
+        font-size: 17px;
+        margin-top: 39px;
+    }
+
+    .text-block ul li {
+        list-style: none;
+        padding: 5px 0;
+    }
+
+    .text-block ul li .fa {
+        margin-right: 15px;
+        color: #fff;
+        background: #22840c;
+        border-radius: 14px;
+    }
+
+    .text-block ul li .fa:before {
+        position: relative;
+        left: 2px;
+    }
+
+    .text-block .button-block {
+        display: inline-block;
+        margin: 10px 0 0 0;
+        padding: 15px 35px;
+        font: 600 30px/34px Roboto, sans-serif;
+        border: 2px solid #fff;
+        border-radius: 14px;
+        text-transform: uppercase;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        .text-block-holder {
+            width: 100%;
+        }
+
+        .text-block {
+            padding: 120px 10px 0 10px;
+        }
+
+        .text-block h1 {
+            font-size: 32px;
+        }
+
+        .text-block h1 span {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        .text-block .sub-title {
+            font: 400 20px/24px Roboto, sans-serif;
+        }
+        .text-block .sub-title2 {
+
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .sub-title2 {
+            display: none;
+        }
+    }
+</style>
+
+
 <body>
 <section class="calculator">
     <div class="form-order">
@@ -15,7 +167,7 @@
                 </div>
                 <div class="radio place">
                     {% for place in places %}
-                    <label class="container place">{{ place.value }}
+                    <label class="container-form place">{{ place.value }}
                         <input type="radio" name="place" id="{{ place.name }}">
                         <span class="checkmark"></span>
                     </label>
@@ -45,7 +197,7 @@
                 </div>
                 <div class="radio kind">
                     {% for kind in kinds %}
-                    <label class="container kind">{{ kind.value }}
+                    <label class="container-form kind">{{ kind.value }}
                         <input type="radio" name="kind" id="{{ kind.name }}">
                         <span class="checkmark"></span>
                     </label>
@@ -58,7 +210,7 @@
                 </div>
                 <div class="radio control">
                     {% for control in controls %}
-                    <label class="container control">{{ control.value }}
+                    <label class="container-form control">{{ control.value }}
                         <input type="radio" name="control" id="{{ control.name }}">
                         <span class="checkmark"></span>
                     </label>
@@ -71,7 +223,7 @@
                 </div>
                 <div class="radio service">
                     {% for service in services %}
-                    <label class="container service">{{ service.value }}
+                    <label class="container-form service">{{ service.value }}
                         <input type="checkbox" name="control" id="{{ service.name }}">
                         <span class="checkmark"></span>
                     </label>
