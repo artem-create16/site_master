@@ -25,7 +25,7 @@ class Kind(enum.Enum):
 class Control(enum.Enum):
     crank = 'Ручной воротковатый'
     spring = 'Ручной пружинный'
-    auto = 'Автоматический с кнопки или пульта'
+    auto = 'Автоматический с пульта'
 
 
 class Services(enum.Enum):

@@ -63,7 +63,7 @@
                 <div class="radio place">
                     {% for place in places %}
                     <div class="image-form">
-                        <img src="../static/img/calculator/{{ place.name }}.jpg" width="300px" height="300px">
+                        <img src="../static/img/calculator/place/{{ place.name }}.jpg" width="300px" height="300px">
                     </div>
                     <label class="container-form place">{{ place.value }}
                         <input type="radio" name="place" id="{{ place.name }}">
@@ -80,11 +80,11 @@
                     <div class="card-form">
                         <div class="input">
                             <input type="text" class="input-field" required/>
-                            <label class="input-label">Высота(мм)</label>
+                            <label class="input-label">Высота(см)</label>
                         </div>
                         <div class="input">
                             <input type="text" class="input-field" required/>
-                            <label class="input-label">Ширина(мм)</label>
+                            <label class="input-label">Ширина(см)</label>
                         </div>
                     </div>
                 </div>
@@ -95,6 +95,9 @@
                 </div>
                 <div class="radio kind">
                     {% for kind in kinds %}
+                    <div class="image-form">
+                        <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
+                    </div>
                     <label class="container-form kind">{{ kind.value }}
                         <input type="radio" name="kind" id="{{ kind.name }}">
                         <span class="checkmark"></span>
@@ -108,6 +111,9 @@
                 </div>
                 <div class="radio control">
                     {% for control in controls %}
+                    <div class="image-form">
+                        <img src="../static/img/calculator/control/{{ control.name }}.jpg" width="300px" height="300px">
+                    </div>
                     <label class="container-form control">{{ control.value }}
                         <input type="radio" name="control" id="{{ control.name }}">
                         <span class="checkmark"></span>
@@ -117,7 +123,7 @@
             </div>
             <div class="service">
                 <div class="title service">
-                    <h2>Выберите, что нужно включить в расчет</h2>
+                    <h2>Выберите, что нужно включить в&nbsp;расчет</h2>
                 </div>
                 <div class="radio service">
                     {% for service in services %}
