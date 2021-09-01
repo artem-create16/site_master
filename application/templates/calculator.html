@@ -52,8 +52,6 @@
 </header>
 
 
-
-
 <body>
 <section class="calculator">
     <div class="form-order">
@@ -64,6 +62,9 @@
                 </div>
                 <div class="radio place">
                     {% for place in places %}
+                    <div class="image-form">
+                        <img src="../static/img/calculator/{{ place.name }}.jpg" width="300px" height="300px">
+                    </div>
                     <label class="container-form place">{{ place.value }}
                         <input type="radio" name="place" id="{{ place.name }}">
                         <span class="checkmark"></span>

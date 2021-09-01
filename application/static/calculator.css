@@ -109,6 +109,10 @@ header {
     user-select: none;
 }
 
+.image-form {
+    text-align: center;
+}
+
 /* Hide the browser's default radio button */
 .container-form input {
     position: absolute;
