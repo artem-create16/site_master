@@ -16,9 +16,10 @@
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>
-            <img src='../static/img/logo.jpg' alt='Мастер лого'/>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../static/img/logo.jpg' alt='Мастер лого'/>
+            </a>
         </div>
-
         <div class="head-block">
             <div class="shedule">
                 График работы:<br/>
@@ -35,32 +36,25 @@
             <span class='phone comagic-msk' data-prefix='7495'>+7 (777) 777-77-77</span>
         </div>
     </div>
-
     <div class="top-menu-holder">
         <div class="wrapper">
             <ul class='top-menu clearfix'>
                 <li><a href='/about/'>О нас</a></li>
-                <li><a href='/about/'>Услуги</a></li>
-                <li><a href="#">Виды роллет</a></li>
+                <!--                <li><a href="#kind">Виды роллет</a></li>-->
                 <li><a href='/action/'>Акции</a></li>
                 <li><a href='/gallery/'>Фото</a></li>
                 <li><a href='/contact/'>Контакты</a></li>
 
             </ul>
             <div class="order-top">
-                <a href="#" class="call-calc">Оставить заявку</a>
+                <a href="#offer" class="call-calc">Оставить заявку</a>
             </div>
         </div>
     </div>
-    <div class="top-menu-holder-after" style="display:none;height:72px;"></div>
-
 </header>
 
 <style>
-    #main-block {
-        height: 600px;
-        position: relative;
-    }
+
 
     .text-block-holder {
         /*width: 70%;*/
@@ -74,7 +68,7 @@
     .text-block {
         position: relative;
         z-index: 2;
-        padding: 11% 90px 0 90px;
+        padding: 66px 90px 60px 90px;
         text-align: center;
         color: #fff;
     }
@@ -134,7 +128,7 @@
         }
 
         .text-block {
-            padding: 120px 10px 0 10px;
+            padding: 15px 10px 0 10px;
         }
 
         .text-block h1 {
@@ -149,10 +143,12 @@
         .text-block .sub-title {
             font: 400 20px/24px Roboto, sans-serif;
         }
+
         .text-block .sub-title2 {
 
         }
     }
+
     @media only screen and (min-width: 768px) {
         .sub-title2 {
             display: none;
@@ -186,11 +182,11 @@
             <ul class='main-zabors main-page' style="margin-top:35px !important;">
                 <li class="main-zabors-item-0">
                     <div class='img-handler'>
-                        <a href='/profnastil/'><img src='../static/img/roll_window.jpg'
-                                                    alt='Заборы из профнастила' width="450px" height="350px"></a>
+                        <img src='../static/img/roll_window.jpg'
+                             alt='Заборы из профнастила' width="450px" height="350px">
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href='/profnastil/'>Рольставни на окна и двери</a></h2></div>
+                        <div class="title"><h2><a id="kind">Рольставни на окна и двери</a></h2></div>
                         <p>Владельцы частных домов и квартир, офисных, производственных и торговых объектов часто
                             устанавливают защитные рольставни на окна. Для производства роллетных систем мы используем
                             только качественные материалы производства компании "Алютех", которые изготавливают на
@@ -209,12 +205,12 @@
 
                 <li class="main-zabors-item-1">
                     <div class='img-handler'>
-                        <a href='/shtaketnik/'><img src='../static/img/antivandal_roll.jpg'
-                                                    alt='Заборы из металлического штакетника' width="450px"
-                                                    height="350px"></a>
+                        <img src='../static/img/antivandal_roll.jpg'
+                             alt='Заборы из металлического штакетника' width="450px"
+                             height="350px">
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href='/shtaketnik/'>Антивандальные рольставни</a></h2></div>
+                        <div class="title"><h2>Антивандальные рольставни</h2></div>
                         <p>Популярными становятся антивандальные рольставни, особенно для зданий, требования по
                             безопасности которых высоки. Ощутимо выросла популярность антивандальных рольставней среди
                             владельцев торговых предприятий, офисов, складов. Неуклонно повышается популярность этих
@@ -233,11 +229,11 @@
 
                 <li class="main-zabors-item-2">
                     <div class='img-handler'>
-                        <a href='/section/'><img src='../static/img/rulonnye-vorota.jpg'
-                                                 alt='Роллетные ворота' width="450px" height="350px"></a>
+                        <img src='../static/img/rulonnye-vorota.jpg'
+                             alt='Роллетные ворота' width="450px" height="350px">
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href='/section/'>Роллетные ворота</a></h2></div>
+                        <div class="title"><h2>Роллетные ворота</h2></div>
                         <p>Роллетные ворота – это компактные конструкции с оригинальным исполнением. Именно эти
                             характеристики являются визитной карточкой ворот, которые могут сворачиваться и прятаться в
                             короб. Основа конструкции заключается в поднятии роллет к потолку и размещении их в
@@ -252,11 +248,11 @@
 
                 <li class="main-zabors-item-3">
                     <div class='img-handler'>
-                        <a href='/rabitsa/'><img src='../static/img/rolstavni_s_foto.jpg'
-                                                 alt='Рольставни с фотопечатью' width="450px" height="350px"></a>
+                        <img src='../static/img/rolstavni_s_foto.jpg'
+                             alt='Рольставни с фотопечатью' width="450px" height="350px">
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href='/rabitsa/'>Рольставни с фотопечатью</a></h2></div>
+                        <div class="title"><h2>Рольставни с фотопечатью</h2></div>
                         <p>Все больше людей сегодня стараются заменять классические решетки, ставни или двери на
                             практичные роллеты. Такие системы могут быть как белыми, так и цветными. Но если Вы хотите
                             не только качественно закрыть окно или нишу, но и внести определенную изюминку в интерьер,
@@ -272,11 +268,11 @@
                 </li>
                 <li class="main-zabors-item-4">
                     <div class='img-handler'>
-                        <a href='/rabitsa/'><img src='../static/img/Rollbox.jpg'
-                                                 alt='Роллетные боксы' width="450px" height="350px"></a>
+                        <img src='../static/img/Rollbox.jpg'
+                             alt='Роллетные боксы' width="450px" height="350px">
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href='/rabitsa/'>Роллетные боксы</a></h2></div>
+                        <div class="title"><h2>Роллетные боксы</h2></div>
                         <p>Роллетный бокс (шкаф в гараж, подземный паркинг) - это новейший выход из затруднительного
                             положения с хранением спортивного инвентаря, автомобильных колес, велосипеда и других вещей,
                             которым нет места в квартире.
@@ -390,10 +386,12 @@
         <div class="container-form">
             <div class="contact-us">
                 <div class="title-offers">
-                    <h2>Остались вопросы?
-                        <br>
-                        Оставьте заявку и мы свяжемся с Вами!
-                    </h2>
+                    <a id="offer">
+                        <h2>Остались вопросы?
+                            <br>
+                            Оставьте заявку и мы свяжемся с Вами!
+                        </h2>
+                    </a>
                 </div>
                 <form class="card-form">
                     <div class="input">
