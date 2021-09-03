@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мастер | Рольставни</title>
     <link rel="stylesheet" href="../static/main.css">
-    <script src="/js/slider.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <style>:root {
         --n: 5
@@ -13,6 +14,18 @@
 
 </head>
 <body>
+<script>
+    $(document).ready(function () {
+    $("a[href*=#]").on("click", function (e) {
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 777);
+        e.preventDefault();
+        return false;
+    });
+});
+</script>
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>

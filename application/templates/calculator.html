@@ -64,6 +64,8 @@
                 </div>
                 <div class="radio place">
                     {% for place in places %}
+                    <div class="pn">
+
                     <div class="image-form">
                         <img src="../static/img/calculator/place/{{ place.name }}.jpg" width="300px" height="300px">
                     </div>
@@ -71,6 +73,7 @@
                         <input type="radio" name="place" id="{{ place.name }}">
                         <span class="checkmark"></span>
                     </label>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
@@ -97,13 +100,16 @@
                 </div>
                 <div class="radio kind">
                     {% for kind in kinds %}
-                    <div class="image-form">
-                        <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
+                    <div class="{{kind.name}}">
+                        <div class="image-form">
+                            <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
+                        </div>
+                        <label class="container-form kind">{{ kind.value }}
+                            <input type="radio" name="kind" id="{{ kind.name }}">
+                            <span class="checkmark"></span>
+                        </label>
+
                     </div>
-                    <label class="container-form kind">{{ kind.value }}
-                        <input type="radio" name="kind" id="{{ kind.name }}">
-                        <span class="checkmark"></span>
-                    </label>
                     {% endfor %}
                 </div>
             </div>

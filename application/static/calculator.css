@@ -94,9 +94,10 @@ header {
 
 
 .container-form {
-    margin-left: 40%;
+    /*margin-left: 40%;*/
+    margin-left: 10%;
     list-style-position: inside;
-    display: block;
+    /*display: block;*/
     position: relative;
     padding-left: 35px;
     padding-right: 200px;
@@ -175,8 +176,12 @@ header {
     /*}*/
 
     .form-order {
-        padding-top: 80px;
+        /*padding-top: 80px;*/
     }
+}
+
+.pn {
+    display: inline-block;
 }
 
 
