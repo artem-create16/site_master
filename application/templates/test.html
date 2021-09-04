@@ -66,7 +66,7 @@
                 <label for="{{ place.name }}">
                     <img src="../static/img/calculator/place/{{ place.name }}.jpg " width="300px" height="300px">
 
-                    <h2>{{ place.value }}</h2>
+                    <h3>{{ place.value }}</h3>
                 </label>
             </div>
             {% endfor %}
@@ -81,11 +81,11 @@
         </div>
         <div class="main kinds">
             {% for kind in kinds %}
-            <div class="{{ kind.name }}">
+            <div class="block {{ kind.name }}">
                 <input type="radio" id="{{ kind.name }}" name="kind" value="{{ kind.name }}">
                 <label for="{{ kind.name }}">
                     <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
-                    <h2>{{ kind.value }}</h2>
+                    <h3>{{ kind.value }}</h3>
                 </label>
             </div>
             {% endfor %}
@@ -118,11 +118,11 @@
         </div>
         <div class="main controls">
             {% for control in controls %}
-            <div class="{{ control.name }}">
+            <div class="block {{ control.name }}">
                 <input type="radio" id="{{ control.name }}" name="control" value="{{ control.name }}">
                 <label for="{{ control.name }}">
                     <img src="../static/img/calculator/control/{{ control.name }}.jpg" width="300px" height="300px">
-                    <h2>{{ control.value }}</h2>
+                    <h3>{{ control.value }}</h3>
                 </label>
             </div>
             {% endfor %}

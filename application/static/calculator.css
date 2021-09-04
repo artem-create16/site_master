@@ -93,11 +93,16 @@ header {
 }
 
 
-
-
 h1 {
     color: #18191b;
     margin-bottom: 2rem;
+}
+
+.block {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
 }
 
 .block:hover {
@@ -110,6 +115,8 @@ h1 {
 .main {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
+    /*margin-left: 15px;*/
 }
 
 .main > div {
@@ -187,15 +194,20 @@ input[type=radio]:checked + label::after {
 @media only screen and (max-width: 700px) {
     .main {
         flex-direction: column;
+        margin-left: 0px;
+    }
+    .main > div {
+        padding: 0;
     }
 }
 
 
 .container-form {
-    /*margin-left: 40%;*/
-    margin-left: 10%;
+    margin-left: 40%;
+    display: inline-block;
+    /*margin-left: 10%;*/
     list-style-position: inside;
-    display: block;
+    /*display: block;*/
     position: relative;
     padding-left: 35px;
     padding-right: 200px;
@@ -277,7 +289,7 @@ input[type=radio]:checked + label::after {
     }
 }
 
-.pn {
+.radio {
     display: inline-block;
 }
 
