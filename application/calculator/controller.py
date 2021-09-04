@@ -8,7 +8,7 @@ def calculator():
     # if form.validate_on_submit():
         print(form.place.data)
         return redirect(url_for('index.index'))
-    return render_template('calculator.html', form=form,
+    return render_template('test.html', form=form,
                            places=Place,
                            kinds=Kind,
                            controls=Control,

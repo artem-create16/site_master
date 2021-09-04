@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/calculator.css">
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../static/img/logo.jpg' alt='Мастер лого'/>
+            </a>
+        </div>
+
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с 8:00 до 19:00
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk' data-prefix='7495'>+7 (777) 777-77-77</span>
+        </div>
+    </div>
+
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href='/about/'>О нас</a></li>
+                <!--                <li><a href='/about/'>Услуги</a></li>-->
+                <!--                <li><a href="#">Виды роллет</a></li>-->
+                <li><a href='/action/'>Акции</a></li>
+                <li><a href='/gallery/'>Фото</a></li>
+                <li><a href='/contact/'>Контакты</a></li>
+
+            </ul>
+            <div class="order-top">
+                <a href="{{ url_for('calculator.calculator') }}" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+    <div class="top-menu-holder-after" style="display:none;height:72px;"></div>
+
+</header>
+
+<form action="" method="POST">
+    <section>
+        <div class="title place">
+            <h2>Выберите место установки</h2>
+        </div>
+        <div class="main place">
+            {% for place in places %}
+            <div class="block {{ place.name }}">
+                <input type="radio" id="{{ place.name }}" name="place" value="{{ place.name }}">
+                <label for="{{ place.name }}">
+                    <img src="../static/img/calculator/place/{{ place.name }}.jpg " width="300px" height="300px">
+
+                    <h2>{{ place.value }}</h2>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+
+    <section>
+        <div class="title kind">
+            <h2>Выберите профиль</h2>
+        </div>
+        <div class="main kinds">
+            {% for kind in kinds %}
+            <div class="{{ kind.name }}">
+                <input type="radio" id="{{ kind.name }}" name="kind" value="{{ kind.name }}">
+                <label for="{{ kind.name }}">
+                    <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
+                    <h2>{{ kind.value }}</h2>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+    <div class="size">
+        <div class="contact-us size">
+            <div class="title place">
+                <h2>Введите размеры</h2>
+            </div>
+            <div class="card-form">
+                <div class="input">
+                    <input type="text" class="input-field" required/>
+                    <label class="input-label">Высота(см)</label>
+                </div>
+                <div class="input">
+                    <input type="text" class="input-field" required/>
+                    <label class="input-label">Ширина(см)</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="title control">
+            <h2>Выберите вид управления</h2>
+        </div>
+        <div class="main controls">
+            {% for control in controls %}
+            <div class="{{ control.name }}">
+                <input type="radio" id="{{ control.name }}" name="control" value="{{ control.name }}">
+                <label for="{{ control.name }}">
+                    <img src="../static/img/calculator/control/{{ control.name }}.jpg" width="300px" height="300px">
+                    <h2>{{ control.value }}</h2>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="form-order">
+        <div class="service">
+            <div class="title service">
+                <h2>Выберите, что нужно включить в&nbsp;расчет</h2>
+            </div>
+            <div class="radio service">
+                {% for service in services %}
+                <label class="container-form service">{{ service.value }}
+                    <input type="checkbox" name="control" id="{{ service.name }}">
+                    <span class="checkmark"></span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <div class="title-offers">
+        </div>
+        <div class="card-form">
+            <div class="input">
+                <input type="text" class="input-field" required/>
+                <label class="input-label">Имя</label>
+            </div>
+            <div class="input">
+                <input type="email" class="input-field" required/>
+                <label class="input-label">Почта</label>
+            </div>
+            <div class="input">
+                <input type="tel" class="input-field" required/>
+                <label class="input-label">Телефон</label>
+            </div>
+            <div class="action">
+                <button type="submit" class="action-button">Отправить</button>
+            </div>
+        </div>
+        <div class="card-info">
+            <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
+                <br>
+                Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке
+                    персональных
+                    данных</a></p>
+        </div>
+    </div>
+</form>
+
+
+<footer>
+    <div class="footer-info">
+        <div class="fi-row">
+            <div class="col-md-4">
+                <div class='logo-footer'>
+                    <img src='../static/img/logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                </div>
+                <div class="social-groups">
+                    <a class="vk-group" rel="nofollow" href="#"></a>
+                    <a class="insta" rel="nofollow" href="#"></a>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div class='adress'>
+                    111111, г. Москва, ул. Пушкина,<br/>д.1, стр.1, оф.1<br/>
+                    ИНН: 11111111, ОГРН: 1111111111<br>
+                </div>
+                <div class="schedule"></div>
+                График работы: с 8:00 до 19:00
+                <div class="footer-phone">
+                    <div class="phone-footer-holder">
+                        <i class='fa fa-phone'></i>
+                        <span class='phone comagic-msk'>+7 (777) 777-77-77</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="certificate">
+                    Место для сертификатов
+                </div>
+            </div>
+        </div>
+        <div class="fi-row no-title">
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="copyright">Мастер &copy;</div>
+    </div>
+</footer>
+</body>
