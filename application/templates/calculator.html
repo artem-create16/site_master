@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +7,8 @@
     <link rel="stylesheet" href="../static/calculator.css">
     <link rel="stylesheet" href="../static/main.css">
 </head>
+
+<body>
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>
@@ -53,126 +54,127 @@
 
 </header>
 
+<form action="" method="POST">
+    <section>
+        <div class="title place">
+            <h2>Выберите место установки</h2>
+        </div>
+        <div class="main place">
+            {% for place in places %}
+            <div class="block {{ place.name }}">
+                <input type="radio" id="{{ place.name }}" name="place" value="{{ place.name }}">
+                <label for="{{ place.name }}">
+                    <img src="../static/img/calculator/place/{{ place.name }}.jpg " width="300px" height="300px">
 
-<body>
-<section class="calculator">
-    <div class="form-order">
-        <form action="" method="POST">
-            <div class="place">
-                <div class="title place">
-                    <h2>Выберите место установки</h2>
-                </div>
-                <div class="radio place">
-                    {% for place in places %}
-                    <div class="pn">
+                    <h3>{{ place.value }}</h3>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
 
-                        <div class="image-form">
-                            <img src="../static/img/calculator/place/{{ place.name }}.jpg" width="300px" height="300px">
-                        </div>
-                        <label class="container-form place">{{ place.value }}
-                            <input type="radio" name="place" id="{{ place.name }}">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="size">
-                <div class="contact-us size">
-                    <div class="title place">
-                        <h2>Введите размеры</h2>
-                    </div>
-                    <div class="card-form">
-                        <div class="input">
-                            <input type="text" class="input-field" required/>
-                            <label class="input-label">Высота(см)</label>
-                        </div>
-                        <div class="input">
-                            <input type="text" class="input-field" required/>
-                            <label class="input-label">Ширина(см)</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kind">
-                <div class="title kind">
-                    <h2>Выберите профиль</h2>
-                </div>
-                <div class="radio kind">
-                    {% for kind in kinds %}
-                    <div class="{{kind.name}}">
-                        <div class="image-form">
-                            <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
-                        </div>
-                        <label class="container-form kind">{{ kind.value }}
-                            <input type="radio" name="kind" id="{{ kind.name }}">
-                            <span class="checkmark"></span>
-                        </label>
+    </section>
 
-                    </div>
-                    {% endfor %}
+
+    <section>
+        <div class="title kind">
+            <h2>Выберите профиль</h2>
+        </div>
+        <div class="main kinds">
+            {% for kind in kinds %}
+            <div class="block {{ kind.name }}">
+                <input type="radio" id="{{ kind.name }}" name="kind" value="{{ kind.name }}">
+                <label for="{{ kind.name }}">
+                    <img src="../static/img/calculator/kind/{{ kind.name }}.jpg" width="300px" height="300px">
+                    <h3>{{ kind.value }}</h3>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+    <div class="size">
+        <div class="contact-us size">
+            <div class="title place">
+                <h2>Введите размеры</h2>
+            </div>
+            <div class="card-form">
+                <div class="input">
+                    <input type="text" class="input-field" required/>
+                    <label class="input-label">Высота(см)</label>
+                </div>
+                <div class="input">
+                    <input type="text" class="input-field" required/>
+                    <label class="input-label">Ширина(см)</label>
                 </div>
             </div>
-            <div class="control">
-                <div class="title control">
-                    <h2>Выберите вид управления</h2>
-                </div>
-                <div class="radio control">
-                    {% for control in controls %}
-                    <div class="image-form">
-                        <img src="../static/img/calculator/control/{{ control.name }}.jpg" width="300px" height="300px">
-                    </div>
-                    <label class="container-form control">{{ control.value }}
-                        <input type="radio" name="control" id="{{ control.name }}">
-                        <span class="checkmark"></span>
-                    </label>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="service">
-                <div class="title service">
-                    <h2>Выберите, что нужно включить в&nbsp;расчет</h2>
-                </div>
-                <div class="radio service">
-                    {% for service in services %}
-                    <label class="container-form service">{{ service.value }}
-                        <input type="checkbox" name="control" id="{{ service.name }}">
-                        <span class="checkmark"></span>
-                    </label>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="contact-us">
-                <div class="title-offers">
-                </div>
-                <div class="card-form">
-                    <div class="input">
-                        <input type="text" class="input-field" required/>
-                        <label class="input-label">Имя</label>
-                    </div>
-                    <div class="input">
-                        <input type="email" class="input-field" required/>
-                        <label class="input-label">Почта</label>
-                    </div>
-                    <div class="input">
-                        <input type="tel" class="input-field" required/>
-                        <label class="input-label">Телефон</label>
-                    </div>
-                    <div class="action">
-                        <button type="submit" class="action-button">Отправить</button>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
-                        <br>
-                        Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке
-                            персональных
-                            данных</a></p>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
-</section>
+
+
+    <section>
+        <div class="title control">
+            <h2>Выберите вид управления</h2>
+        </div>
+        <div class="main controls">
+            {% for control in controls %}
+            <div class="block {{ control.name }}">
+                <input type="radio" id="{{ control.name }}" name="control" value="{{ control.name }}">
+                <label for="{{ control.name }}">
+                    <img src="../static/img/calculator/control/{{ control.name }}.jpg" width="300px" height="300px">
+                    <h3>{{ control.value }}</h3>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="form-order">
+        <div class="service">
+            <div class="title service">
+                <h2>Выберите, что нужно включить в&nbsp;расчет</h2>
+            </div>
+            <div class="radio service">
+                {% for service in services %}
+                <label class="container-form service">{{ service.value }}
+                    <input type="checkbox" name="control" id="{{ service.name }}">
+                    <span class="checkmark"></span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us">
+        <div class="title-offers">
+        </div>
+        <div class="card-form">
+            <div class="input">
+                <input type="text" class="input-field" required/>
+                <label class="input-label">Имя</label>
+            </div>
+            <div class="input">
+                <input type="email" class="input-field" required/>
+                <label class="input-label">Почта</label>
+            </div>
+            <div class="input">
+                <input type="tel" class="input-field" required/>
+                <label class="input-label">Телефон</label>
+            </div>
+            <div class="action">
+                <button type="submit" class="action-button">Отправить</button>
+            </div>
+        </div>
+        <div class="card-info">
+            <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
+                <br>
+                Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке
+                    персональных
+                    данных</a></p>
+        </div>
+    </div>
+</form>
+
 
 <footer>
     <div class="footer-info">
@@ -216,9 +218,4 @@
         <div class="copyright">Мастер &copy;</div>
     </div>
 </footer>
-
 </body>
-</html>
-
-
-

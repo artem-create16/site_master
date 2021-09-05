@@ -16,16 +16,17 @@
 <body>
 <script>
     $(document).ready(function () {
-    $("a[href*=#]").on("click", function (e) {
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 777);
-        e.preventDefault();
-        return false;
+        $("a[href*=#]").on("click", function (e) {
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 777);
+            e.preventDefault();
+            return false;
+        });
     });
-});
 </script>
+
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>
@@ -394,45 +395,48 @@
     </section>
 </div>
 
-<section class="offers">
-    <div class="wrapper">
-        <div class="container-form">
-            <div class="contact-us">
-                <div class="title-offers">
-                    <a id="offer">
-                        <h2>Остались вопросы?
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    <section class="offers">
+        <div class="wrapper">
+            <div class="container-form">
+                <div class="contact-us">
+                    <div class="title-offers">
+                        <a id="offer">
+                            <h2>Остались вопросы?
+                                <br>
+                                Оставьте заявку и мы свяжемся с Вами!
+                            </h2>
+                        </a>
+                    </div>
+                    <form class="card-form">
+                        <div class="input">
+                            <input type="text" class="input-field" name="name" required/>
+                            <label class="input-label">Имя</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" class="input-field" name="email" required/>
+                            <label class="input-label">Почта</label>
+                        </div>
+                        <div class="input">
+                            <input type="tel" class="input-field" name="number" required/>
+                            <label class="input-label">Телефон</label>
+                        </div>
+                        <div class="action">
+                            <button type="submit" class="action-button">Отправить</button>
+                        </div>
+                    </form>
+                    <div class="card-info">
+                        <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
                             <br>
-                            Оставьте заявку и мы свяжемся с Вами!
-                        </h2>
-                    </a>
-                </div>
-                <form class="card-form">
-                    <div class="input">
-                        <input type="text" class="input-field" required/>
-                        <label class="input-label">Имя</label>
+                            Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке персональных
+                                данных</a></p>
                     </div>
-                    <div class="input">
-                        <input type="email" class="input-field" required/>
-                        <label class="input-label">Почта</label>
-                    </div>
-                    <div class="input">
-                        <input type="tel" class="input-field" required/>
-                        <label class="input-label">Телефон</label>
-                    </div>
-                    <div class="action">
-                        <button class="action-button">Отправить</button>
-                    </div>
-                </form>
-                <div class="card-info">
-                    <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
-                        <br>
-                        Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке персональных
-                            данных</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</form>
 
 
 <div class="wrapper" style="padding:0;">
