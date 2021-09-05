@@ -9,7 +9,7 @@ mail = Mail()
 
 def init_app():
     app = Flask(__name__)
-    SECRET_KEY = S3Connection(os.environ['SECRET_KEY'], os.environ['SECRET_KEY'])
+    app.config['SECRET_KEY'] = str(os.getenv("SECRET_KEY"))
     ADMIN_EMAIL = S3Connection(os.environ['ADMIN_EMAIL'], os.environ['ADMIN_EMAIL'])
     WORK_MAIL = S3Connection(os.environ['WORK_MAIL'], os.environ['WORK_MAIL'])
     WORK_MAIL_PASSWORD = S3Connection(os.environ['WORK_MAIL_PASSWORD'], os.environ['WORK_MAIL_PASSWORD'])
