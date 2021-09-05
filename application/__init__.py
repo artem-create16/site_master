@@ -1,8 +1,8 @@
 import os
-from flask_mail import Mail, Message
+from flask_mail import Mail
 from flask import Flask
 from dotenv import load_dotenv
-from boto.s3.connection import S3Connection
+
 load_dotenv()
 mail = Mail()
 
