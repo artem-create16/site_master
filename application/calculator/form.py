@@ -37,10 +37,12 @@ class Services(enum.Enum):
 
 class CalculatorForm(FlaskForm):
     place = RadioField('Place', choices=[place.name for place in Place])
-    size = StringField('Size', validators=[DataRequired()])
+    height = StringField('Height', validators=[DataRequired()])
+    width = StringField('Width', validators=[DataRequired()])
     kind = RadioField('Kind', choices=[kind.name for kind in Kind])
     control = RadioField('Control', choices=[control.name for control in Control])
     services = SelectMultipleField('Services', choices=[service.name for service in Services])
-    name = StringField('Size', validators=[DataRequired()])
-    number = StringField('Size', validators=[DataRequired()])
+    name = StringField('Name', validators=[DataRequired()])
+    email = StringField('Size', validators=[DataRequired()])
+    number = StringField('Number', validators=[DataRequired()])
     submit = SubmitField('Go')

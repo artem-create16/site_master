@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+
+{% extends "flash.html" %}
+
+{% block content %}
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мастер | Рольставни</title>
     <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/flash.css">
     <script src="../js/slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
@@ -169,7 +174,6 @@
         }
     }
 </style>
-
 
 <section id="main-block" class="index"
          style="background:url(../static/img/header.jpg) no-repeat center top;background-size:cover;">
@@ -394,6 +398,16 @@
         </div>
     </section>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+<script>
+  function flash() {Swal.fire({
+  position: 'top',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 2000
+})}
+</script>
 
 <form action="" method="POST">
     {{ form.csrf_token }}
@@ -423,7 +437,7 @@
                             <label class="input-label">Телефон</label>
                         </div>
                         <div class="action">
-                            <button type="submit" class="action-button">Отправить</button>
+                            <button type="submit" class="action-button" onclick="">Отправить</button>
                         </div>
                     </form>
                     <div class="card-info">
@@ -491,3 +505,4 @@
 
 </body>
 </html>
+{% endblock %}
