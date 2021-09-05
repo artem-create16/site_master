@@ -10,11 +10,12 @@ mail = Mail()
 def init_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = str(os.getenv("SECRET_KEY"))
-    ADMIN_EMAIL = S3Connection(os.environ['ADMIN_EMAIL'], os.environ['ADMIN_EMAIL'])
-    WORK_MAIL = S3Connection(os.environ['WORK_MAIL'], os.environ['WORK_MAIL'])
-    WORK_MAIL_PASSWORD = S3Connection(os.environ['WORK_MAIL_PASSWORD'], os.environ['WORK_MAIL_PASSWORD'])
-    MAIL_SERVER = S3Connection(os.environ['MAIL_SERVER'], os.environ['MAIL_SERVER'])
-    MAIL_PORT = S3Connection(os.environ['MAIL_PORT'], os.environ['MAIL_PORT'])
+    app.config['SQLALCHEMY_DATABASE_URI'] = str(os.getenv("SQLALCHEMY_DATABASE_URI"))
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+    app.config['MAIL_PORT'] = 465
+    app.config['MAIL_USERNAME'] = str(os.getenv("WORK_MAIL"))
+    app.config['MAIL_PASSWORD'] = str(os.getenv("WORK_MAIL_PASSWORD"))
     app.config['MAIL_USE_TLS'] = False
     app.config['MAIL_USE_SSL'] = True
 
