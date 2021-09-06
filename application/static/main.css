@@ -489,6 +489,10 @@ a.insta, span.insta {
     background: #1f770f;
 }
 
+.content .main-zabors .button:hover {
+    background: #1f770f;
+}
+
 .data-viewed .data {
     position: absolute;
     left: 20px;

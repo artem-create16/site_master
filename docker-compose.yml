@@ -9,4 +9,14 @@ services:
       - .:/usr/src/app
     ports:
       - 5000:5000
-    command: ["python", "run.py"]
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    volumes:
+      - /application/static/:/static
+    depends_on:
+      - api
+    ports:
+      - 80:80
