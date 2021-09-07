@@ -25,7 +25,7 @@
             var anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $(anchor.attr('href')).offset().top
-            }, 777);
+            }, 10);
             e.preventDefault();
             return false;
         });
@@ -58,7 +58,7 @@
     <div class="top-menu-holder">
         <div class="wrapper">
             <ul class='top-menu clearfix'>
-                <li><a href='/about/'>О нас</a></li>
+                <li><a href='#about'>О нас</a></li>
                 <!--                <li><a href="#kind">Виды роллет</a></li>-->
                 <li><a href='/action/'>Акции</a></li>
                 <li><a href='/gallery/'>Фото</a></li>
@@ -309,6 +309,28 @@
 </div>
 
 <div class="wrapper">
+    <div class="about">
+        <div class="title about">
+            <a id="about">
+                <h2>О компании</h2>
+            </a>
+        </div>
+        <div class="text-about">
+            Наша компания занимается производством и установкой ворот, заборов, рольставен и шлагбаумов.
+            <br>
+            <br>
+            Мы работаем в этой области более 13-ти лет и за это время у нас сформировалась отличная команда специалистов
+            - профессиональных монтажников, сварщиков, замерщиков, менеджеров.
+            <br>
+            <br>
+            Заказывая производство и установку у нас, Вы можете быть уверены в том, что будут использоваться
+            качественные материалы и изделия. Почему? Потому что мы не хотим переделывать свою работу и очень хотим,
+            чтобы Ваши соседи и друзья обращались к нам по Вашим рекомендациям. Мы всегда Вам рады!
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
     <section>
         <div class="content">
             <div class="work-title"><h2>Отзывы о работе с нами</h2></div>
@@ -399,13 +421,15 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
 <script>
-  function flash() {Swal.fire({
-  position: 'top',
-  icon: 'success',
-  title: 'Your work has been saved',
-  showConfirmButton: false,
-  timer: 2000
-})}
+    function flash() {
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
 </script>
 
 <form action="" method="POST">

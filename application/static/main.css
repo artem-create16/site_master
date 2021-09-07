@@ -939,6 +939,36 @@ footer {
     }
 }
 
+.text-about {
+    margin-left: 100px;
+    /*text-align: center;*/
+}
+
+
+.title.about {
+    margin-left: 65px;
+}
+
+.about .title-about {
+    margin-left: 150px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .about {
+        margin-top: -56px;
+        margin-bottom: 40px;
+    }
+
+    .text-about {
+        margin-left: 0;
+        padding: 0 0.75rem;
+    }
+
+    .title.about {
+        margin-left: 0;
+    }
+}
 
 /*SWIPER*/
 
