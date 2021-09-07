@@ -28,7 +28,7 @@ body {
 
 .wrapper {
     box-sizing: border-box;
-    width: 940px;
+    width: 1050px;
     margin: 0px auto;
     min-height: 100%;
     background: #fff;
@@ -307,7 +307,7 @@ header .wrapper {
     box-shadow: none;
     background: none;
     padding: 10px 20px 7px;
-    border-bottom: 1px solid #efefef;
+    /*border-bottom: 1px solid #efefef;*/
 }
 
 .logo {
@@ -619,7 +619,7 @@ ul.top-menu li:not(.logo-menu) a, ul.top-menu li span {
     text-decoration: none;
     float: left;
     text-transform: uppercase;
-    border-right: 1px solid #efefef;
+    /*border-right: 1px solid #efefef;*/
 }
 
 ul.top-menu > li:not(.logo-menu) a:before, ul.top-menu > li span:before {
@@ -940,13 +940,14 @@ footer {
 }
 
 .text-about {
-    margin-left: 100px;
+    /*margin-left: 100px;*/
     /*text-align: center;*/
+    max-width: 1050px;
 }
 
 
 .title.about {
-    margin-left: 65px;
+    /*margin-left: 65px;*/
 }
 
 .about .title-about {
@@ -988,7 +989,7 @@ footer {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
-    width: 80%
+    width: 100%
 }
 
 .swiper-button-next {
@@ -1000,13 +1001,19 @@ footer {
 }
 
 .swiper-slide .review-text {
-    font-size: 2.8vmin;
+    /*font-size: 2.8vmin;*/
     margin: 0;
     position: absolute;
     top: 50%;
     left: 10%;
     right: 10%;
     transform: translate(0, -50%)
+}
+
+@media only screen and (max-width: 768px) {
+    .swiper-slide .review-text {
+        font-size: 2.8vmin;
+    }
 }
 
 /*SWIPER*/
