@@ -1,13 +1,13 @@
 import os
-import pytz
 from flask_mail import Message
 from application import mail
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 
 def send_notification(name, number, email):
-    timezone = pytz.timezone("Europe/Moscow")
-    date = datetime.now(timezone).strftime('%d.%m.%y %H:%M:%S')
+    delta = timedelta(hours=3, minutes=0)
+    datetime_now = datetime.now(timezone.utc) + delta
+    date = datetime_now.strftime('%d.%m.%y %H:%M:%S')
     msg = Message(
         f'Новая заявка ({date})',
         sender=os.environ['WORK_MAIL'],
