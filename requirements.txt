@@ -13,9 +13,9 @@ jmespath==0.10.0
 MarkupSafe==2.0.1
 python-dateutil==2.8.2
 python-dotenv==0.19.0
+pytz==2021.1
 s3transfer==0.5.0
 six==1.16.0
 urllib3==1.26.6
 Werkzeug==2.0.1
 WTForms==2.3.3
-uWSGI==2.0.19.1
