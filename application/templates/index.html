@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мастер | Рольставни</title>
+    <link rel="icon" href="../static/img/logo_mini.jpg">
     <link rel="stylesheet" href="../static/main.css">
     <link rel="stylesheet" href="../static/flash.css">
     <script src="../js/slider.js"></script>
@@ -62,7 +63,7 @@
                 <!--                <li><a href="#kind">Виды роллет</a></li>-->
                 <li><a href='/action/'>Акции</a></li>
                 <li><a href='/gallery/'>Фото</a></li>
-                <li><a href='#about'>Контакты</a></li>
+                <li><a href='#contacts'>Контакты</a></li>
 
             </ul>
             <div class="order-top">
@@ -73,7 +74,13 @@
 </header>
 
 <style>
+    h2:hover {
+        color: #3d3f43;
+    }
 
+    .content .title a:hover {
+        color: #3d3f43;
+    }
 
     .text-block-holder {
         /*width: 70%;*/
@@ -200,11 +207,14 @@
             <ul class='main-zabors main-page' style="margin-top:35px !important;">
                 <li class="main-zabors-item-0">
                     <div class='img-handler'>
-                        <img src='../static/img/roll_window.jpg'
-                             alt='Заборы из профнастила' width="450px">
+                        <a href="{{ url_for('calculator.calculator') }}">
+                            <img src='../static/img/roll_window.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a id="kind">Рольставни на окна и двери</a></h2></div>
+                        <div class="title"><h2><a href="{{ url_for('calculator.calculator') }}">Рольставни на окна и
+                            двери</a></h2></div>
                         <p>Владельцы частных домов и квартир, офисных, производственных и торговых объектов часто
                             устанавливают защитные рольставни на окна. Для производства роллетных систем мы используем
                             только качественные материалы производства компании "Алютех", которые изготавливают на
@@ -223,11 +233,14 @@
 
                 <li class="main-zabors-item-1">
                     <div class='img-handler'>
-                        <img src='../static/img/antivandal_roll.jpg'
-                             alt='Заборы из металлического штакетника' width="450px">
+                        <a href="{{ url_for('calculator.calculator') }}">
+                            <img src='../static/img/antivandal_roll.jpg'
+                                 alt='Заборы из металлического штакетника' width="450px">
+                        </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2>Антивандальные рольставни</h2></div>
+                        <div class="title"><h2><a href="{{ url_for('calculator.calculator') }}">Антивандальные
+                            рольставни</a></h2></div>
                         <p>Популярными становятся антивандальные рольставни, особенно для зданий, требования по
                             безопасности которых высоки. Ощутимо выросла популярность антивандальных рольставней среди
                             владельцев торговых предприятий, офисов, складов. Неуклонно повышается популярность этих
@@ -246,11 +259,14 @@
 
                 <li class="main-zabors-item-2">
                     <div class='img-handler'>
-                        <img src='../static/img/rulonnye-vorota.jpg'
-                             alt='Роллетные ворота' width="450px">
+                        <a href="{{ url_for('calculator.calculator') }}">
+                            <img src='../static/img/rulonnye-vorota.jpg'
+                                 alt='Роллетные ворота' width="450px">
+                        </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2>Роллетные ворота</h2></div>
+                        <div class="title"><h2><a href="{{ url_for('calculator.calculator') }}">Роллетные ворота</a>
+                        </h2></div>
                         <p>Роллетные ворота – это компактные конструкции с оригинальным исполнением. Именно эти
                             характеристики являются визитной карточкой ворот, которые могут сворачиваться и прятаться в
                             короб. Основа конструкции заключается в поднятии роллет к потолку и размещении их в
@@ -265,11 +281,14 @@
 
                 <li class="main-zabors-item-3">
                     <div class='img-handler'>
-                        <img src='../static/img/rolstavni_s_foto.jpg'
-                             alt='Рольставни с фотопечатью' width="450px">
+                        <a href="{{ url_for('calculator.calculator') }}">
+                            <img src='../static/img/rolstavni_s_foto.jpg'
+                                 alt='Рольставни с фотопечатью' width="450px">
+                        </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2>Рольставни с фотопечатью</h2></div>
+                        <div class="title"><h2><a href="{{ url_for('calculator.calculator') }}">Рольставни с
+                            фотопечатью</a></h2></div>
                         <p>Все больше людей сегодня стараются заменять классические решетки, ставни или двери на
                             практичные роллеты. Такие системы могут быть как белыми, так и цветными. Но если Вы хотите
                             не только качественно закрыть окно или нишу, но и внести определенную изюминку в интерьер,
@@ -285,11 +304,14 @@
                 </li>
                 <li class="main-zabors-item-4">
                     <div class='img-handler'>
-                        <img src='../static/img/Rollbox2.jpg'
-                             alt='Роллетные боксы' width="450px">
+                        <a href="{{ url_for('calculator.calculator') }}">
+                            <img src='../static/img/Rollbox2.jpg'
+                                 alt='Роллетные боксы' width="450px">
+                        </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2>Роллетные боксы</h2></div>
+                        <div class="title"><h2><a href="{{ url_for('calculator.calculator') }}">Роллетные боксы</a></h2>
+                        </div>
                         <p>Роллетный бокс (шкаф в гараж, подземный паркинг) - это новейший выход из затруднительного
                             положения с хранением спортивного инвентаря, автомобильных колес, велосипеда и других вещей,
                             которым нет места в квартире.
@@ -311,7 +333,7 @@
 <div class="wrapper">
     <div class="about">
         <div class="title about">
-            <a id="about">
+            <a id="contacts">
                 <h2>О компании</h2>
             </a>
         </div>
@@ -334,10 +356,63 @@
             Режим работы: ежедневно с 9:00 до 21:00<br><br>
             Мобильный офис работает ежедневно без выходных и праздничных дней
             <br>
-            Сделать заказ, вызвать замерщика, сделать расчет или получить профессиональную консультацию Вы можете по телефону +7 (777) 777 77 77 или заполнив форму ниже.
+            Сделать заказ, вызвать замерщика, сделать расчет или получить профессиональную консультацию Вы можете по
+            телефону +7 (777) 777 77 77 или заполнив форму ниже.
         </div>
     </div>
 </div>
+
+<div class="wrapper">
+    <section>
+        <div class="text-advantage">
+            <div class="title advantage">
+                <a id="about">
+                    <h2>Преимущества компании "Мастер"</h2>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Опыт работы 14 лет</h3>
+                </li>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Бесплытные замеры в любое удобное для Вас время</h3>
+                </li>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Мантаж за 1 день квалифицированными рабочими</h3>
+                </li>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Гарантия 3 года</h3>
+                </li>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Оплата любым удобным для Вас способом</h3>
+                </li>
+                <li>
+                    <div class="img-logo-mini">
+                        <img src='../static/img/logo_mini.jpg' alt="logo-mini" height="46px">
+                    </div>
+                    <h3>Бесплатные консультации на протяжении всего срока эксплуатации</h3>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</div>
+
 
 <div class="wrapper">
     <section>
@@ -394,7 +469,7 @@
                     <div class="work-title"><h2>Как мы работаем</h2></div>
                     <div class="body">
                         <article data-year="Шаг 1" style="--idx: 0; --slist: #fff251,#ffb258">
-                            <h3>Заявка</h3>
+                            <a href="#offer"><h3>Заявка</h3></a>
                             <p>Оставьте заявку на сайте или позвоните нам для уточнения заказа, выбора удобной даты и
                                 вызова замерщика</p>
                         </article>
@@ -469,7 +544,7 @@
                             <label class="input-label">Телефон</label>
                         </div>
                         <div class="action">
-                            <button type="submit" class="action-button" onclick="">Отправить</button>
+                            <button type="submit" class="action-button" onclick="">Оставить заявку!</button>
                         </div>
                     </form>
                     <div class="card-info">

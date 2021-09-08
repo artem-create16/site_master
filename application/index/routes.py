@@ -13,9 +13,9 @@ def index():
     return render_template('index.html', title='Master', form=form)
 
 
-@index_blueprint.route('/', methods=["POST"])
-def requisition():
-    return controller.requisition()
+@index_blueprint.route('/', methods=["POST", "GET"])
+def requisition(*args):
+    return controller.requisition(*args)
 
 
 @index_blueprint.route('/js/<path:path>')
