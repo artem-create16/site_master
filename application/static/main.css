@@ -950,11 +950,13 @@ footer {
 }
 
 .text-advantage li {
+    overflow: hidden;
     margin-top: 25px;
 }
 
 
 .text-advantage h3 {
+    overflow: hidden;
     font-size: 18px;
     margin-left: 60px;
 }
@@ -965,6 +967,7 @@ footer {
 
 @media only screen and (max-width: 767px) {
     .text-advantage {
+        overflow: hidden;
         margin-top: -45px;
         padding: 0 0.75rem;
     }
