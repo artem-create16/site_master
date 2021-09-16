@@ -949,6 +949,7 @@ footer {
     display: grid;
     overflow: hidden;
     grid-template-columns: auto auto auto;
+    margin-top: 55px;
 }
 
 .text-advantage li {
