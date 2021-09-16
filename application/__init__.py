@@ -22,8 +22,10 @@ def init_app():
     with app.app_context():
         from application.index.routes import index_blueprint
         from application.calculator.routes import calculator_blueprint
+        from application.error.routes import error_blueprint
         app.register_blueprint(index_blueprint)
         app.register_blueprint(calculator_blueprint)
+        app.register_blueprint(error_blueprint)
 
     mail.init_app(app)
     return app
