@@ -2,9 +2,11 @@ import os
 from flask_mail import Mail
 from flask import Flask
 from dotenv import load_dotenv
+from flask_talisman import Talisman
 
 load_dotenv()
 mail = Mail()
+talisman = Talisman()
 
 
 def init_app():
@@ -28,4 +30,5 @@ def init_app():
         app.register_blueprint(error_blueprint)
 
     mail.init_app(app)
+    talisman.init_app(app)
     return app

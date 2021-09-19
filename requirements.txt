@@ -5,6 +5,7 @@ botocore==1.21.36
 click==8.0.1
 Flask==2.0.1
 Flask-Mail==0.9.1
+flask-talisman==0.8.1
 Flask-WTF==0.15.1
 gunicorn==20.1.0
 itsdangerous==2.0.1

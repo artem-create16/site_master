@@ -12,5 +12,4 @@ COPY . .
 
 EXPOSE 5000
 
-#CMD ["uwsgi", "app.ini"]
 CMD gunicorn --bind 0.0.0.0:$PORT run:app

@@ -9,14 +9,3 @@ services:
       - .:/usr/src/app
     ports:
       - 5000:5000
-
-  nginx:
-    build: ./nginx
-    container_name: nginx
-    restart: always
-    volumes:
-      - /application/static/:/static
-    depends_on:
-      - api
-    ports:
-      - 80:80
