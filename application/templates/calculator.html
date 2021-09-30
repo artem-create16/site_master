@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../static/calculator.css">
     <link rel="stylesheet" href="../static/main.css">
 </head>
-
 <style>
     @media only screen and (max-width: 767px) {
         .phone-top .phone {
@@ -169,7 +168,7 @@
                 <label class="input-label">Почта</label>
             </div>
             <div class="input">
-                <input type="tel" class="input-field" name="number" required/>
+                <input type="tel" class="input-field" name="number" required pattern="[0-9]{11}"/>
                 <label class="input-label">Телефон</label>
             </div>
             <div class="action">

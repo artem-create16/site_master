@@ -10,7 +10,7 @@ def calculator():
         send_notification_calculator(form.place.data, form.kind.data, form.height.data,
                                      form.width.data, form.control.data, request.form.getlist('services'),
                                      form.name.data, form.email.data, form.number.data)
-        flash('Спасибо за заявку!')
+        flash('Спасибо за заявку! Мы перезвоним вам в ближайшее время!', category='good')
         return redirect(url_for('index.index'))
     return render_template(
         'calculator.html',
