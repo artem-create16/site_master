@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-{% extends "flash.html" %}
 
 {% block content %}
 <html lang="ru">
@@ -382,7 +381,6 @@
 </div>
 
 
-
 <div class="wrapper">
     <div class="about">
         <div class="title about">
@@ -414,8 +412,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 <div class="wrapper">
@@ -508,19 +504,6 @@
         </div>
     </section>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
-<script>
-    function flash() {
-        Swal.fire({
-            position: 'top',
-            icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 2000
-        })
-    }
-</script>
-
 <form action="" method="POST">
     {{ form.csrf_token }}
     <section class="offers">
@@ -535,6 +518,17 @@
                             </h2>
                         </a>
                     </div>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    {% if category == 'bad' %}
+                    <h3 style="color: red">{{ message }}</h3>
+                    {% else %}
+                    <h3 style="color: green">{{ message }}</h3>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
                     <form class="card-form">
                         <div class="input">
                             <input type="text" class="input-field" name="name" required/>
@@ -544,12 +538,12 @@
                             <input type="email" class="input-field" name="email" required/>
                             <label class="input-label">Почта</label>
                         </div>
-                        <div class="input">
+                        <div class="input" id="phone">
                             <input type="tel" class="input-field" name="number" required/>
                             <label class="input-label">Телефон</label>
                         </div>
                         <div class="action">
-                                <button type="submit" class="action-button">Оставить заявку!</button>
+                            <button type="submit" class="action-button">Оставить заявку!</button>
                         </div>
                     </form>
                     <div class="card-info">
