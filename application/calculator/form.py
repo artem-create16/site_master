@@ -17,9 +17,9 @@ class Kind(enum.Enum):
     foam = 'Пенозаполненный'
     anti_vandal = 'Антивандальный'
     lattice = 'Решетчатый'
-    steel = 'Стальной'
-    steel_lattice = 'Стальной решетчатый'
-    transparent = 'Прозрачный'
+    # steel = 'Стальной'
+    # steel_lattice = 'Стальной решетчатый'
+    # transparent = 'Прозрачный'
 
 
 class Control(enum.Enum):
