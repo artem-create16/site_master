@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Рольставни на окна</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../static/img/main_logo.jpg' alt='Мастер лого'/>
+            </a>
+        </div>
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с&nbsp;8:00 до&nbsp;21:00
+                <br>
+                без выходных
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+        </div>
+    </div>
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a></li>
+                <!--                <li><a href="#kind">Виды роллет</a></li>-->
+                <li><a href=''>Ворота</a></li>
+                <li><a href='/gallery/'>Заборы</a></li>
+                <li><a href='#contacts'>Контакты</a></li>
+            </ul>
+            <div class="order-top">
+                <a href="#offer" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next, .text {
+            font-size: 11px
+        }
+    }
+
+    .img {
+        text-align: center;
+    }
+
+    .offers {
+        padding-top: 46px;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <div class='text-handler'>
+        <div class="title"><h2>Рольставни на окна и двери</h2></div>
+        <p>Рольставни на окна являются одной из разновидностей защитных жалюзи или роллетов, предназначенных для защиты
+            помещения от взлома и проникновения злоумышленников. Данное средство защиты помещений, как правило,
+            изготовляется в виде рулона, 2-х направляющих и пластин, скользящих по ним. Подобные роллеты выполняют не
+            только
+            лишь защитную функцию. Они также используются с целью скрыть помещения от посторонних глаз. Кроме того,
+            подобные
+            защитные жалюзи необходимы для предотвращения попадания в помещения пыли, шума, ветра и света.</p>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <div class="img">
+                <img src="../static/img/roller_shutters/windows/window1.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <div class="img">
+                <img src="../static/img/roller_shutters/windows/window2.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <div class="img">
+                <img src="../static/img/roller_shutters/windows/window3.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <div class='text-handler'>
+        <div class="title"><h3>Преимущества рольставней</h3></div>
+        <p>Среди основных преимуществ данных конструкций стоит отметить повышенную степень жесткости роллетного полотна
+            в
+            открытом положении. Такой эффект достигается за счет установки экструдированных концевых профилей. Они также
+            обеспечивают препятствование несанкционированному подъему роллетного полотна.
+            <br>
+            К преимуществам можно отнести и возможность надежной защиты стекла от механических ударов и вандальских
+            действий. Благодаря этому, жильцам первых этажей и владельцам магазинов не нужно использовать массивные
+            металлические решетки, которые уже давно изжили себя. Еще один плюс – неприхотливость в эксплуатации.
+            Рольставни
+            не нуждаются в регулярном профилактическом обслуживании и ремонте. Эти роллетные системы также отличаются
+            долговечностью, безопасностью и простотой.
+        </p>
+    </div>
+
+    <div class='text-handler'>
+        <div class="title"><h3>Общее строение и принцип работы</h3></div>
+        <ul>
+            <li>Защитный короб – скрывает полотно в свернутом положении, защищает материал от повреждения и
+                загрязнения.
+            </li>
+            <li>Октогональный вал – расположен в защитном коробе. На эту часть наматывается полотно.</li>
+            <li> Полотно – состоит из ламелей (одинаковых профилей) и выполняет ограждающую и декоративную функции.</li>
+            <li> Боковые направляющие шины – монтируются вертикально на стены или откосы, по ним движется штора.</li>
+            <li> Привод – система управление рольставнями, бывает ручной, пружинной и электронной.</li>
+            <li> Замковое устройство – устанавливается на концевой профиль полотна и блокирует рольставни в развернутом
+                положении.
+            </li>
+        </ul>
+        <div class='img-handler'>
+            <div class="img">
+
+                <img src='../static/img/roller_shutters/windows/schema_roll.jpg'
+                     alt='Роллетные ворота' width="100%">
+            </div>
+
+        </div>
+    </div>
+
+    <div class='text-handler'>
+        <div class="title"><h3>Виды управления</h3></div>
+        <p>Управление роллетной системой может быть ручным или автоматизированным. Во втором случае используются
+            специальные электроприводы. Элементы управления рольставнями подбираются в соответствии с их весом, размером
+            и степенью удобства оператора. Также внимания заслуживает достаточно низкая стоимость данной роллетной
+            системы в сравнении с усадебными или гаражными воротами.
+        </p>
+        <div class='img-handler'>
+            <div class="img">
+
+                <img src='../static/img/roller_shutters/windows/control_roll.jpg'
+                     alt='Роллетные ворота' width="100%">
+            </div>
+        </div>
+        <div class='text-handler'>
+            <div class="title"><h3>Варианты монтажа рольставней</h3></div>
+            <ul>
+                <li>Накладной – конструкция рольставней фиксируется поверх стены.</li>
+                <li>Встроенный – защитный короб и направляющие элементы расположены в проеме (на откосах).</li>
+                <li>Комбинированный – требуется устройство специальной ниши под короб.</li>
+            </ul>
+            <div class='img-handler'>
+                <div class="img">
+
+                    <img src='../static/img/roller_shutters/windows/mounting2.jpg'
+                         alt='Роллетные ворота' width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="" method="POST">
+    {{ form.csrf_token }}
+    <section class="offers">
+        <div class="wrapper">
+            <div class="container-form">
+                <div class="contact-us">
+                    <div class="title-offers">
+                        <a id="offer">
+                            <h2>Остались вопросы?
+                                <br>
+                                Оставьте заявку и мы свяжемся с Вами!
+                            </h2>
+                        </a>
+                    </div>
+                    <form class="card-form">
+                        <div class="input">
+                            <input type="text" class="input-field" name="name" required/>
+                            <label class="input-label">Имя</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" class="input-field" name="email" required/>
+                            <label class="input-label">Почта</label>
+                        </div>
+                        <div class="input" id="phone">
+                            <input type="tel" class="input-field" name="number" required pattern="[0-9]{11}"/>
+                            <label class="input-label">Телефон</label>
+                        </div>
+                        <div class="action">
+                            <button type="submit" class="action-button">Оставить заявку!</button>
+                        </div>
+                    </form>
+                    <div class="card-info">
+                        <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
+                            <br>
+                            Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке персональных
+                                данных</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+<footer>
+    <div class="footer-info">
+        <div class="fi-row">
+            <div class="col-md-4">
+                <div class='logo-footer'>
+                    <img src='../static/img/main_logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                </div>
+                <div class="social-groups">
+                    <a class="vk-group" rel="nofollow" href="#"></a>
+                    <a class="insta" rel="nofollow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class='adress'>
+                    Московская область, г. Красногорск.&nbsp;ул. Центральная&nbsp;3А
+                </div>
+                <div class="schedule">График работы: с 9:00 до 21:00 без выходных</div>
+                <div class="footer-phone">
+                    <div class="phone-footer-holder">
+                        <i class='fa fa-phone'></i>
+                        <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="certificate">
+                    Место для сертификатов
+                </div>
+            </div>
+        </div>
+        <div class="fi-row no-title">
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="copyright">Мастер &copy;</div>
+    </div>
+</footer>
+</body>
+</html>

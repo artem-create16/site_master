@@ -974,7 +974,7 @@ footer {
 @media only screen and (max-width: 767px) {
     .text-advantage {
         overflow: hidden;
-        margin-top: -45px;
+        margin-top: -15px;
         padding: 0 0.75rem;
     }
     .text-advantage ul {
@@ -1277,7 +1277,7 @@ footer {
         display: flex;
         justify-content: center;
         position: relative;
-        padding: 0 20px 0 35px;
+        padding: 0 0px 0 0px;
         border: none;
     }
 
