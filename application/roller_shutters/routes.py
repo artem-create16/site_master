@@ -17,3 +17,33 @@ def main_roller_shutters():
 @talisman()
 def show_windows_doors():
     return controller.show_windows_doors()
+
+
+@roller_shutters.route('/roller_shutters/antivandalnye')
+@talisman()
+def show_antivandal():
+    return controller.show_antivandal()
+
+
+@roller_shutters.route('/roller_shutters/roller_gateway')
+@talisman()
+def show_roller_gateway():
+    return controller.show_roller_gateway()
+
+
+@roller_shutters.route('/roller_shutters/roll_with_photo')
+@talisman()
+def show_roll_with_photo():
+    return controller.show_roll_with_photo()
+
+
+@roller_shutters.route('/roller_shutters/roll_box')
+@talisman()
+def show_roll_box():
+    return controller.show_roll_box()
+
+
+@roller_shutters.route('/roller_shutters/plumbing_shutters')
+@talisman()
+def show_plumbing_shutters():
+    return controller.show_plumbing_shutters()
