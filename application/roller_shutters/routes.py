@@ -1,8 +1,10 @@
 import os
-from application import talisman
-from flask import Blueprint, render_template, request, send_from_directory
+
+from flask import Blueprint
+
 import application.roller_shutters.controller as controller
-from application.index.form import IndexForm
+from application import talisman
+
 template_dir = os.path.abspath('../templates')
 roller_shutters = Blueprint('roller_shutters', __name__, template_folder=template_dir)
 

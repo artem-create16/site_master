@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заборы</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../static/img/main_logo.jpg' alt='Мастер лого'/>
+            </a>
+        </div>
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с&nbsp;8:00 до&nbsp;21:00
+                <br>
+                без выходных
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+        </div>
+    </div>
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a></li>
+                <!--                <li><a href="#kind">Виды роллет</a></li>-->
+                <li><a href=''>Ворота</a></li>
+                <li><a href='/gallery/'>Заборы</a></li>
+                <li><a href='#contacts'>Контакты</a></li>
+            </ul>
+            <div class="order-top">
+                <a href="#offer" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="wrapper">
+    <section>
+        <div class='content'>
+            <ul class='main-zabors main-page' style="margin-top:35px !important;">
+                <li class="main-zabors-item-0">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('roller_shutters.show_antivandal') }}">
+                            <img src='../static/img/fence/zabor_iz_profnastila_4.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('fence.show_fence_profnastil') }}">Заборы из
+                            профнастила</a></h2></div>
+                        <p>Данный вид заборов - это один из вариантов сплошного ограждения. Профнастил нового поколения,
+                            который предлагает наша компания, изготавливается из оцинкованного металла высочайшего
+                            качества.
+                            <br>
+                            Заборы из профнастила прекрасно смотрятся и не нуждаются в особом уходе благодаря своему
+                            уникальному покрытию. Чаще всего металлические листы ограждения покрываются специальной
+                            порошковой краской, и такое покрытие сохранит безупречный внешний вид на долгие годы. Цвет
+                            лакокрасочного покрытия Вы можете выбрать на свой вкус, и Ваш забор будет гармонично
+                            смотреться на фоне окружающей среды и самого дома.
+                        </p>
+                        <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a>
+                    </div>
+                </li>
+
+
+                <li class="main-zabors-item-1">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('roller_shutters.show_antivandal') }}">
+                            <img src='../static/img/fence/shtak4.jpg'
+                                 alt='Заборы из металлического штакетника' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('fence.show_fence_evroshtaketnik') }}">
+                            Заборы из евроштакетника</a></h2></div>
+                        <p>Евроштакетник представляет собой профилированные планки из оцинкованного металла, покрытые
+                            цветным защитным полимером с одной или двух сторон. Для усиления антикоррозийных свойств
+                            материала края каждой заготовки подвергаются дополнительной обработке, поэтому в готовом
+                            виде планки отличаются высоким качеством и выглядят безупречно ровно. Изготавливается
+                            металлический штакетник размером от 1-го до 4-х метров в длину. Средняя ширина единицы
+                            составляет 7-8 см.
+                            <br>
+                            Одним из главных условий долговечности забора из евроштакетника является соблюдение
+                            технических условий и норм строительства при его возведении. Поэтому этот процесс
+                            рекомендуется доверить профессионалам.
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+
+
+                <li class="main-zabors-item-2">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('roller_shutters.show_roller_gateway') }}">
+                            <img src='../static/img/fence/zabor_iz_setki_rabitsa.jpg'
+                                 alt='Роллетные ворота' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('fence.show_fence_rabitz') }}">Заборы из
+                            сетки "рабица"</a>
+                        </h2></div>
+                        <p>Чтобы оградить дачный участок или территорию вокруг загородного дома, не обязательно ставить
+                            капитальный забор по всей границе. Нередко возникают обстоятельства, когда можно применить
+                            более легкие ограждения, пропускающие воздух и солнечный свет.
+                            <br>
+                            Заборы, созданные из сетки-рабицы, пользуются популярностью у населения. Повышенная
+                            востребованность материала объясняется его техническими характеристиками и спецификой
+                            монтажа.
+                            <br>
+                            Основным достоинством сетки-рабицы является относительно невысокая цена. Владельцы
+                            загородных домов и земельных участков могут существенно сэкономить семейный бюджет, отдав
+                            предпочтение этому материалу.
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+                <li class="main-zabors-item-3">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('roller_shutters.show_roll_with_photo') }}">
+                            <img src='../static/img/fence/3d-panel.jpg'
+                                 alt='Рольставни с фотопечатью' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('fence.show_fence_3d') }}">Заборы из
+                            панельных ограждений - 3D</a></h2></div>
+                        <p> 3Д- забор - это металлическая сетчатая конструкция, выполненная из оцинкованных или
+                            окрашенных полимерным покрытием стальных прутьев. Объемный эффект достигается благодаря Ʌ -
+                            образным выступам. Сделаны они в первую очередь для добавления жесткости конструкции, а цинк
+                            и полимерная краска отвечают за высокую износостойкость 3D-панелей, поэтому срок службы этих
+                            заборов составляет около 50 лет.
+                            <br>
+                            Разные варианты креплений (скобы, хомуты) 3D секций к столбам
+                            помогают не только подобрать нужную конфигурацию монтажа, а ещё и повысить антивандальные
+                            свойства забора. Кстати, монтаж самих опор можно производить по любым проверенным
+                            технологиям, благодаря очень низкому весу 3D секций и нулевой парусности.
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-info">
+        <div class="fi-row">
+            <div class="col-md-4">
+                <div class='logo-footer'>
+                    <img src='../static/img/main_logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                </div>
+                <div class="social-groups">
+                    <a class="vk-group" rel="nofollow" href="#"></a>
+                    <a class="insta" rel="nofollow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class='adress'>
+                    Московская область, г. Красногорск.&nbsp;ул. Центральная&nbsp;3А
+                </div>
+                <div class="schedule">График работы: с 9:00 до 21:00 без выходных</div>
+                <div class="footer-phone">
+                    <div class="phone-footer-holder">
+                        <i class='fa fa-phone'></i>
+                        <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="certificate">
+                    Место для сертификатов
+                </div>
+            </div>
+        </div>
+        <div class="fi-row no-title">
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="copyright">Мастер &copy;</div>
+    </div>
+</footer>
+</body>
+</html>

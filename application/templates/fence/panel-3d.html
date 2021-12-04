@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3Д забор</title>
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../static/img/main_logo.jpg' alt='Мастер лого'/>
+            </a>
+        </div>
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с&nbsp;8:00 до&nbsp;21:00
+                <br>
+                без выходных
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+        </div>
+    </div>
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a></li>
+                <!--                <li><a href="#kind">Виды роллет</a></li>-->
+                <li><a href=''>Ворота</a></li>
+                <li><a href='/gallery/'>Заборы</a></li>
+                <li><a href='#contacts'>Контакты</a></li>
+            </ul>
+            <div class="order-top">
+                <a href="#offer" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next, .text {
+            font-size: 11px
+        }
+    }
+
+    .img {
+        text-align: center;
+    }
+
+    .offers {
+        padding-top: 46px;
+    }
+</style>
+<body>
+<div class="wrapper">
+    <div class='text-handler'>
+        <div class="title"><h2>3Д заборы</h2></div>
+        <p>Монтаж 3D забора часто производят на разных промышленных объектах, частных домах, парковках, садиках.
+            Надежность, продолжительное время эксплуатации и низкая стоимость – основные преимущества этого ограждения.
+            3D заборы – это привлекательное и практичное решение для ограды территории.
+        </p>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <div class="img">
+                <img src="../static/img/fence/panel-3d/panel-3d.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <div class="img">
+                <img src="../static/img/fence/panel-3d/panel-3d2.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <div class="img">
+                <img src="../static/img/fence/panel-3d/panel-3d3.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <div class='text-handler'>
+        <div class="title"><h3>Преимущества 3d заборов</h3></div>
+        <ul>
+            <li>Основным достоинством забора является прочностью и надежность</li>
+            <li>Длительный срок эксплуатации</li>
+            <li>Простота установки</li>
+            <li>Сетка рабица, это удачный вариант ограждения для участков с большой растительностью</li>
+            <li>Светопропускная способность и проветривание</li>
+            <li>Ассортимент. Покупатели имеют возможность выбирать среди огромного разнообразия расцветок</li>
+            <li>Прочность</li>
+        </ul>
+    </div>
+
+    <div class='text-handler'>
+        <div class="title"><h3>Общее строение</h3></div>
+        <ul>
+            <li>
+                Установка 3D забора не подразумевает сварку – это весомое достоинство. Работы ведутся быстро, и
+                повышенные температуры не нарушают свойств металла.
+            </li>
+            <li>
+                Крепкий фиксирующий механизм – металлические скобы или прижимные пластины с болтами и антивандальными
+                гайками.
+            </li>
+            <li>
+                Простота – устройство забора 3D не занимает много сил и времени. Для работ по установке 3D заграждения
+                достаточно 2–3 человек.
+            </li>
+        </ul>
+        <div class='img-handler'>
+            <div class="img">
+
+                <img src='../static/img/fence/panel-3d/panel-3d4.jpg'
+                     alt='Роллетные ворота' width="100%">
+            </div>
+        </div>
+    </div>
+
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        <section class="offers">
+            <div class="wrapper">
+                <div class="container-form">
+                    <div class="contact-us">
+                        <div class="title-offers">
+                            <a id="offer">
+                                <h2>Остались вопросы?
+                                    <br>
+                                    Оставьте заявку и мы свяжемся с Вами!
+                                </h2>
+                            </a>
+                        </div>
+                        <form class="card-form">
+                            <div class="input">
+                                <input type="text" class="input-field" name="name" required/>
+                                <label class="input-label">Имя</label>
+                            </div>
+                            <div class="input">
+                                <input type="email" class="input-field" name="email" required/>
+                                <label class="input-label">Почта</label>
+                            </div>
+                            <div class="input" id="phone">
+                                <input type="tel" class="input-field" name="number" required pattern="[0-9]{11}"/>
+                                <label class="input-label">Телефон</label>
+                            </div>
+                            <div class="action">
+                                <button type="submit" class="action-button">Оставить заявку!</button>
+                            </div>
+                        </form>
+                        <div class="card-info">
+                            <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
+                                <br>
+                                Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке
+                                    персональных
+                                    данных</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-info">
+        <div class="fi-row">
+            <div class="col-md-4">
+                <div class='logo-footer'>
+                    <img src='../static/img/main_logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                </div>
+                <div class="social-groups">
+                    <a class="vk-group" rel="nofollow" href="#"></a>
+                    <a class="insta" rel="nofollow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class='adress'>
+                    Московская область, г. Красногорск.&nbsp;ул. Центральная&nbsp;3А
+                </div>
+                <div class="schedule">График работы: с 9:00 до 21:00 без выходных</div>
+                <div class="footer-phone">
+                    <div class="phone-footer-holder">
+                        <i class='fa fa-phone'></i>
+                        <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="certificate">
+                    Место для сертификатов
+                </div>
+            </div>
+        </div>
+        <div class="fi-row no-title">
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="copyright">Мастер &copy;</div>
+    </div>
+</footer>
+</body>
+</html>
