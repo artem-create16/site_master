@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ворота</title>
+    <link rel="stylesheet" href="../../static/main.css">
+</head>
+<header>
+    <div class='wrapper' style="position:relative;">
+        <div class='logo'>
+            <a href="{{ url_for('index.index')}}">
+                <img src='../../static/img/main_logo.jpg' alt='Мастер лого'/>
+            </a>
+        </div>
+        <div class="head-block">
+            <div class="shedule">
+                График работы:<br/>
+                с&nbsp;8:00 до&nbsp;21:00
+                <br>
+                без выходных
+            </div>
+            <div class="attention">
+                Все виды роллетных систем в Москве и МО
+            </div>
+            <div class="partner">
+                Партнер Гк Алютех
+            </div>
+        </div>
+        <div class='phone-top'>
+            <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+        </div>
+    </div>
+    <div class="top-menu-holder">
+        <div class="wrapper">
+            <ul class='top-menu clearfix'>
+                <li><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a></li>
+                <li><a href="{{ url_for('gates.main_gates')}}">Ворота</a></li>
+                <li><a href="{{ url_for('fence.main_fence')}}">Заборы</a></li>
+                <li><a href='https://www.5master.ru/#contacts'>Контакты</a></li>
+            </ul>
+            <div class="order-top">
+                <a href="https://www.5master.ru/#offer" class="call-calc">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="wrapper">
+    <section>
+        <div class='content'>
+            <ul class='main-zabors main-page' style="margin-top:35px !important;">
+                <li class="main-zabors-item-0">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('gates.show_gates_prom') }}">
+                            <img src='../../static/img/gates/prom.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('gates.show_gates_prom') }}">Промышленные
+                            ворота</a></h2></div>
+                        <p>Складские помещения нуждаются в дополнительной безопасности, обеспечить высокий уровень
+                            защиты могут специальные промышленные ворота для склада. Они предусматривают как въезд
+                            транспорта в помещение, так и проход людей. Кроме этого, они позволят надёжно защитить
+                            содержимое, которое хранится на складе от злоумышленников и холода.
+                        </p>
+                        <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a>
+                    </div>
+                </li>
+
+                <li class="main-zabors-item-2">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('gates.show_gates_sectionnye') }}">
+                            <img src='../../static/img/gates/sectionvorota.jpg'
+                                 alt='Роллетные ворота' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('gates.show_gates_sectionnye') }}">Секционные ворота</a>
+                        </h2></div>
+                        <p>Для тех, кто ценит высокую функциональность, надежность, качество и безопасность отличным
+                            выбором будут секционные ворота. Компания "Мастер" предлагает широкий выбор
+                            высокотехнологичной продукции по самым выгодным ценам. Мы поможем подобрать надежную и
+                            удобную в использовании модель ворот, которые будут отвечать всем необходимым критериям и
+                            пожеланиям по функциональности, надежности, износостойкости, качеству и долговечности.
+                            Продукция сертифицирована, что является подтверждением отличного качества и предельной
+                            надежности
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+                <li class="main-zabors-item-3">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('gates.show_gates_otkatnye') }}">
+                            <img src='../../static/img/gates/otkatvorota.jpg'
+                                 alt='Рольставни с фотопечатью' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('gates.show_gates_otkatnye') }}">Откатные ворота</a></h2>
+                        </div>
+                        <p>Для тех, кто высоко ценит качество, надежность и предельную безопасность, откатные ворота
+                            будут лучшим выбором. Они отлично себя
+                            зарекомендовали в применении на промышленных предприятиях, в загородных коттеджах, усадьбах
+                            и других местах. Практичные и универсальные в использовании модели ворот дают возможность
+                            обеспечить должную скорость пропуска посетителей на объект и обеспечить максимальную
+                            безопасность объекта.
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+                <li class="main-zabors-item-3">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('gates.show_gates_raspashnye') }}">
+                            <img src='../../static/img/gates/raspashnie_vorota.jpg'
+                                 alt='Рольставни с фотопечатью' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('gates.show_gates_raspashnye') }}">Распашные ворота</a></h2>
+                        </div>
+                        <p>Распашные ворота являются наиболее популярным типом конструкций, широко используемых в
+                            обустройстве загородных участков, дач, частных территорий. Они ценятся за простоту монтажа,
+                            безопасность и надежность в эксплуатации. Современные производители предлагают широкий
+                            модельный ряд распашных конструкций, среди которых особенно выделяются автоматические
+                            модели.
+                            <a href="https://www.5master.ru/#offer" class="button">Оставить заявку</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-info">
+        <div class="fi-row">
+            <div class="col-md-4">
+                <div class='logo-footer'>
+                    <img src='../../static/img/main_logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                </div>
+                <div class="social-groups">
+                    <a class="vk-group" rel="nofollow" href="#"></a>
+                    <a class="insta" rel="nofollow" href="#"></a>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class='adress'>
+                    Московская область, г. Красногорск.&nbsp;ул. Центральная&nbsp;3А
+                </div>
+                <div class="schedule">График работы: с 9:00 до 21:00 без выходных</div>
+                <div class="footer-phone">
+                    <div class="phone-footer-holder">
+                        <i class='fa fa-phone'></i>
+                        <span class='phone comagic-msk'>+7 (495) 369-40-47</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="certificate">
+                    Место для сертификатов
+                </div>
+            </div>
+        </div>
+        <div class="fi-row no-title">
+            <div class="col-md-4">
+            </div>
+        </div>
+        <div class="copyright">Мастер &copy;</div>
+    </div>
+</footer>
+</body>
+</html>

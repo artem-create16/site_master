@@ -1,7 +1,7 @@
 import os
-from application import talisman
-from flask import Blueprint, render_template, request, send_from_directory
-import application.index.controller as controller
+
+from flask import Blueprint, render_template
+
 from application.index.form import IndexForm
 
 template_dir = os.path.abspath('../templates')
@@ -30,6 +30,3 @@ def show_fence_rabitz():
 def show_fence_3d():
     form = IndexForm()
     return render_template('fence/panel-3d.html', form=form)
-
-
-

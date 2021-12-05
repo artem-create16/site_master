@@ -38,12 +38,10 @@
     <div class="top-menu-holder">
         <div class="wrapper">
             <ul class='top-menu clearfix'>
-                <li><a href="https://www.5master.ru/#about">О нас</a></li>
-                <!--                <li><a href='/about/'>Услуги</a></li>-->
-                <!--                <li><a href="#">Виды роллет</a></li>-->
-                <li><a href='/action/'>Акции</a></li>
-                <li><a href='/gallery/'>Фото</a></li>
-                <li><a href="https://www.5master.ru/#contacts">Контакты</a></li>
+                <li><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a></li>
+                <li><a href="{{ url_for('gates.main_gates')}}">Ворота</a></li>
+                <li><a href="{{ url_for('fence.main_fence')}}">Заборы</a></li>
+                <li><a href='https://www.5master.ru/#contacts'>Контакты</a></li>
             </ul>
             <div class="order-top">
                 <a href="https://www.5master.ru/#offer" class="call-calc">Оставить заявку</a>

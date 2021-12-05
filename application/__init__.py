@@ -27,11 +27,13 @@ def init_app():
         from application.error.routes import error_blueprint
         from application.roller_shutters.routes import roller_shutters
         from application.fence.routes import fence
+        from application.gates.routes import gates
         app.register_blueprint(index_blueprint)
         app.register_blueprint(calculator_blueprint)
         app.register_blueprint(error_blueprint)
         app.register_blueprint(roller_shutters)
         app.register_blueprint(fence)
+        app.register_blueprint(gates)
 
     mail.init_app(app)
     talisman.init_app(app, content_security_policy={})
