@@ -1580,9 +1580,15 @@ h3 {
     padding: 0.25rem 0;
 }
 
+
 .contact-us .input-field:focus, .contact-us .input-field:valid {
     outline: 0;
     border-bottom-color: #6658d3;
+}
+
+.input-field-message:focus + .input-label, .input-field-message + .input-label {
+    color: #6658d3;
+    transform: translateY(-1.5rem);
 }
 
 .input-field:focus + .input-label, .input-field:valid + .input-label {

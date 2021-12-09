@@ -9,30 +9,30 @@ template_dir = os.path.abspath('../templates')
 fence = Blueprint('fence', __name__, template_folder=template_dir)
 
 
-@fence.route('/fence')
+@fence.route('/zabory')
 @talisman()
 def main_fence():
     return controller.main_fence()
 
 
-@fence.route('/fence/profnastil')
+@fence.route('/zabory/profnastil')
 @talisman()
 def show_fence_profnastil():
     return controller.show_fence_profnastil()
 
 
-@fence.route('/fence/evroshtaketnik')
+@fence.route('/zabory/evroshtaketnik')
 @talisman()
 def show_fence_evroshtaketnik():
     return controller.show_fence_evroshtaketnik()
 
 
-@fence.route('/fence/rabitz')
+@fence.route('/zabory/rabitz')
 @talisman()
 def show_fence_rabitz():
     return controller.show_fence_rabitz()
 
-@fence.route('/fence/3d')
+@fence.route('/zabory/3d')
 @talisman()
 def show_fence_3d():
     return controller.show_fence_3d()

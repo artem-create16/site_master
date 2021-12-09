@@ -14,7 +14,7 @@ index_blueprint = Blueprint('index', __name__, template_folder=template_dir)
 @talisman()
 def index():
     form = IndexForm()
-    return render_template('index.html', title='Master', form=form)
+    return render_template('index.html', form=form)
 
 
 @index_blueprint.route('/', methods=["POST", "GET"])
