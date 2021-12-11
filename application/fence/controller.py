@@ -1,11 +1,6 @@
-import os
-
-from flask import Blueprint, render_template
+from flask import render_template
 
 from application.index.form import IndexForm
-
-template_dir = os.path.abspath('../templates')
-index_blueprint = Blueprint('index', __name__, template_folder=template_dir)
 
 
 def main_fence():

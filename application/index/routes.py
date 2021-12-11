@@ -2,7 +2,7 @@ import os
 
 from flask import Blueprint, render_template, send_from_directory
 
-import application.index.controller as controller
+from application.helper.utils import requisition as helper_requisition
 from application import talisman
 from application.index.form import IndexForm
 
@@ -19,7 +19,7 @@ def index():
 
 @index_blueprint.route('/', methods=["POST", "GET"])
 def requisition(*args):
-    return controller.requisition(*args)
+    return helper_requisition(redirect_url='index.index', *args)
 
 
 @index_blueprint.route('/js/<path:path>')

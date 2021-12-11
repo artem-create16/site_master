@@ -1,7 +1,11 @@
 import os
-from flask_mail import Message
-from application import mail
 from datetime import datetime, timedelta, timezone
+
+from flask import redirect, url_for, flash
+from flask_mail import Message
+
+from application import mail
+from application.index.form import IndexForm
 
 
 def send_notification(name, number, email):
@@ -30,3 +34,11 @@ def send_notification_calculator(place, kind, height, width, control, services, 
                f"Место установки: {place}\nВид рольставни: {kind}\nВысота: {height}\nШирина: {width}\n" \
                f"Управление: {control}\nУслуги: {services}"
     mail.send(msg)
+
+
+def requisition(redirect_url):
+    form = IndexForm()
+    if form.validate_on_submit():
+        send_notification(form.name.data, form.number.data, form.email.data)
+        flash('Спасибо за заявку!')
+        return redirect(url_for(redirect_url))
