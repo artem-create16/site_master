@@ -40,7 +40,7 @@ def show_gates_otkatnye():
 
 @gates.route('/vorota/otkatnye-vorota', methods=["POST", "GET"])
 def requisition_otkatnye(*args):
-    return helper_requisition(redirect_url='gates.show_gates_otkatnye', *args)
+    return helper_requisition(redirect_url='gates.show_gates_otkatnye', link='otkatnye-vorota', *args)
 
 
 @gates.route('/vorota/raspashnye-vorota')
@@ -51,4 +51,4 @@ def show_gates_raspashnye():
 
 @gates.route('/vorota/raspashnye-vorota', methods=["POST", "GET"])
 def requisition_raspashnye(*args):
-    return helper_requisition(redirect_url='gates.show_gates_raspashnye', *args)
+    return helper_requisition(redirect_url='gates.show_gates_raspashnye', link='raspashnye-vorota', *args)

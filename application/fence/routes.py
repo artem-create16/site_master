@@ -24,9 +24,7 @@ def show_fence_profnastil():
 
 @fence.route('/zabory/profnastil', methods=["POST", "GET"])
 def requisition_profnastil(*args):
-    print(args)
-
-    return helper_requisition(redirect_url='fence.show_fence_profnastil', *args)
+    return helper_requisition(redirect_url='fence.show_fence_profnastil', link='zabory/profnastil', *args)
 
 
 @fence.route('/zabory/evroshtaketnik')
@@ -37,7 +35,7 @@ def show_fence_evroshtaketnik():
 
 @fence.route('/zabory/evroshtaketnik', methods=["POST", "GET"])
 def requisition_evroshtaketnik(*args):
-    return helper_requisition(redirect_url='fence.show_fence_evroshtaketnik', *args)
+    return helper_requisition(redirect_url='fence.show_fence_evroshtaketnik', link='zabory/evroshtaketnik', *args)
 
 
 @fence.route('/zabory/rabitz')
@@ -48,7 +46,7 @@ def show_fence_rabitz():
 
 @fence.route('/zabory/rabitz', methods=["POST", "GET"])
 def requisition_rabitz(*args):
-    return helper_requisition(redirect_url='fence.show_fence_rabitz', *args)
+    return helper_requisition(redirect_url='fence.show_fence_rabitz', link='zabory/rabitz', *args)
 
 
 @fence.route('/zabory/3d')
@@ -59,5 +57,5 @@ def show_fence_3d():
 
 @fence.route('/zabory/3d', methods=["POST", "GET"])
 def requisition_3d(*args):
-    return helper_requisition(redirect_url='fence.show_fence_3d', *args)
+    return helper_requisition(redirect_url='fence.show_fence_3d', link='zabory/3d', *args)
 

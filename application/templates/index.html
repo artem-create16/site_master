@@ -17,11 +17,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.5master.ru/static/img/favicon_package/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.5master.ru/static/img/favicon_package/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.5master.ru/static/img/favicon_package/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="https://www.5master.ru/static/img/favicon_package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="https://www.5master.ru/static/img/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="https://www.5master.ru/static/img/favicon_package/favicon-16x16.png">
     <link rel="manifest" href="https://www.5master.ru/static/img/favicon_package/site.webmanifest">
-    <link rel="mask-icon" href="https://www.5master.ru/static/img/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="https://www.5master.ru/static/img/favicon_package/safari-pinned-tab.svg"
+          color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- favicon -->
@@ -52,19 +56,6 @@
 
 </head>
 <body>
-<script>
-    $(document).ready(function () {
-        $("a[href*=#]").on("click", function (e) {
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top
-            }, 10);
-            e.preventDefault();
-            return false;
-        });
-    });
-</script>
-
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>
@@ -80,7 +71,7 @@
                 без выходных
             </div>
             <div class="attention">
-                Все виды роллетных систем в Москве и МО
+                Все виды роллетных систем, ворот и&nbsp;заборов в&nbsp;Москве и&nbsp;МО
             </div>
             <div class="partner">
                 Партнер Гк Алютех
@@ -228,7 +219,7 @@
             </div>
             <div class="sub-title2">
                 <p>График работы: с&nbsp;8:00 до&nbsp;21:00 без выходных</p>
-                <p>Все виды роллетных систем в&nbsp;Москве и&nbsp;МО</p>
+                <p>Все виды роллетных систем, ворот и&nbsp;заборов в&nbsp;Москве и&nbsp;МО</p>
                 <p>Партнер Гк&nbsp;Алютех</p>
             </div>
         </div>
@@ -322,6 +313,85 @@
     </div>
 </div>
 
+<div class="wrapper">
+    <section>
+        <div class='content'>
+            <div class="title"><h2>Каталог продуктов</h2></div>
+            <ul class='main-zabors main-page' style="margin-top:35px !important;">
+                <li class="main-zabors-item-0">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('fence.main_fence')}}">
+                            <img src='../static/img/fence/shtak4.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('fence.main_fence')}}">Заборы</a></h2>
+                        </div>
+                        <p>Надежное, качественное решение для ограждения территории Вашего дома</p>
+                        <a href="{{ url_for('fence.show_fence_profnastil') }}">Заборы из профнастила</a>
+                        <br>
+                        <a href="{{ url_for('fence.show_fence_evroshtaketnik') }}">Заборы из евроштакетника</a>
+                        <br>
+                        <a href="{{ url_for('fence.show_fence_rabitz') }}">Заборы из сетки "рабица"</a>
+                        <br>
+                        <a href="{{ url_for('fence.show_fence_3d') }}">Заборы из панельных ограждений - 3Д</a>
+                        <a href="{{ url_for('fence.main_fence')}}" class="button">Перейти в раздел</a>
+                    </div>
+                </li>
+                <li class="main-zabors-item-0">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('roller_shutters.main_roller_shutters')}}">
+                            <img src='../static/img/roll_window.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a>
+                        </h2>
+                        </div>
+                        <p>Современное решение для защиты окон частных домов, магазинов, ларьков и других помещений от
+                            посторонних глаз, непогоды и хулиганов</p>
+                        <a href="{{ url_for('roller_shutters.show_windows_doors') }}">Рольставни на окна и двери</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_plumbing_shutters') }}">Сантехнические рольставни</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_antivandal') }}">Антивандальные рольставни</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_roller_gateway') }}">Роллетные ворота</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_roll_box') }}">Роллетные боксы</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_roll_with_photo') }}">Рольставни с фотопечатью</a>
+                        <a href="{{ url_for('roller_shutters.main_roller_shutters')}}" class="button">Перейти в
+                            раздел</a>
+                    </div>
+                </li>
+                <li class="main-zabors-item-0">
+                    <div class='img-handler'>
+                        <a href="{{ url_for('gates.main_gates')}}">
+                            <img src='../static/img/gates/otkatvorota.jpg'
+                                 alt='Заборы из профнастила' width="450px">
+                        </a>
+                    </div>
+                    <div class='text-handler'>
+                        <div class="title"><h2><a href="{{ url_for('gates.main_gates')}}">Ворота</a>
+                        </h2>
+                        </div>
+                        <p>Надежное, функциональное и эстетичное решение для организации въезда на территорию частного дома, промышленного объекта или гаража</p>
+                        <a href="{{ url_for('gates.show_gates_otkatnye') }}">Откатные ворота</a>
+                        <br>
+                        <a href="{{ url_for('roller_shutters.show_roller_gateway') }}">Роллетные ворота</a>
+                        <br>
+                        <a href="{{ url_for('gates.show_gates_raspashnye') }}">Распашные ворота</a>
+                        <a href="{{ url_for('roller_shutters.main_roller_shutters')}}" class="button">Перейти в
+                            раздел</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
 
 <div class="wrapper">
     <script src="../js/slider.js"></script>
@@ -338,21 +408,27 @@
                             <p>"Устанавливали рольставни на даче в подмосковье, нареканий нет, все быстро и качественно!
                                 Приехали два русских парня, работали слаженно, сразу видно, что не первый день работают
                                 в
-                                паре, молодцы"</p>
+                                паре, молодцы"
+                                <br>
+                                Дмитрий Синицин (10.12.2018)</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="review-text">
-                            <p>"Заказывал через ребят рольставни в ванную комнату. Приехали, посоветовали как лучше
-                                поставить. Подписали договор, внес предоплату. На следующей недели приехали, за пару
+                            <p>"Заказывал через ребят рольставни в ванную комнату. Приехали, посоветовали, как лучше
+                                поставить. Подписали договор, внес предоплату. На следующий день приехали, за пару
                                 часов
-                                без зазоров все поставили."</p>
+                                без зазоров все поставили."
+                                <br>
+                                Андрей Жернаков (03.01.2019)</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="review-text">
                             <p>"Заказывал забор с установкой, все сделано быстро и профессионально! В день обращения
-                                приехал замерщик, через три дня забор уже стоял!"</p>
+                                приехал замерщик, через три дня забор уже стоял!"
+                                <br>
+                                Олег Иванов (14.12.2018)</p>
                         </div>
                     </div>
                 </div>
@@ -447,7 +523,7 @@
                     <div class="card-info">
                         <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
                             <br>
-                            Отправляя свои данные Вы соглашаетесь с <a href="#">соглашением об обработке персональных
+                            Отправляя свои данные Вы соглашаетесь с <a href="{{ url_for('index.assign')}}">соглашением об обработке персональных
                                 данных</a></p>
                     </div>
                 </div>
@@ -456,6 +532,8 @@
     </section>
 </form>
 
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9462500993fdca42fa8eb5fe94426d1c0243b46cf7f94f42781c313407d39991&amp;source=constructor"
+        width="100%" height="400" frameborder="0"></iframe>
 
 <div class="wrapper" style="padding:0;">
     <section>

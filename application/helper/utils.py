@@ -8,7 +8,7 @@ from application import mail
 from application.index.form import IndexForm
 
 
-def send_notification(name, number, email):
+def send_notification(name, number, email, link):
     delta = timedelta(hours=3, minutes=0)
     datetime_now = datetime.now(timezone.utc) + delta
     date = datetime_now.strftime('%d.%m.%y %H:%M:%S')
@@ -17,7 +17,7 @@ def send_notification(name, number, email):
         sender=os.environ['WORK_MAIL'],
         recipients=[os.environ['ADMIN_EMAIL']]
     )
-    msg.body = f"Дата: {date}\nИмя: {name}\nНомер: {number}\nПочта: {email}"
+    msg.body = f"Дата: {date}\nИмя: {name}\nНомер: {number}\nПочта: {email}\nЗаявка со страницы: {link}"
     mail.send(msg)
 
 
@@ -36,9 +36,9 @@ def send_notification_calculator(place, kind, height, width, control, services, 
     mail.send(msg)
 
 
-def requisition(redirect_url):
+def requisition(redirect_url, link):
     form = IndexForm()
     if form.validate_on_submit():
-        send_notification(form.name.data, form.number.data, form.email.data)
+        send_notification(form.name.data, form.number.data, form.email.data, link)
         flash('Спасибо за заявку!')
         return redirect(url_for(redirect_url))

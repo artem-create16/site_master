@@ -25,7 +25,7 @@ def show_windows_doors():
 
 @roller_shutters.route('/rolstavni/rolstavni-na-okna-dvery', methods=["POST", "GET"])
 def requisition_okna(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_windows_doors', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_windows_doors', link='rolstavni-na-okna-dvery', *args)
 
 
 @roller_shutters.route('/rolstavni/antivandalnye')
@@ -36,7 +36,7 @@ def show_antivandal():
 
 @roller_shutters.route('/rolstavni/antivandalnye', methods=["POST", "GET"])
 def requisition_antivandalnye(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_antivandal', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_antivandal', link='rolstavni/antivandalnye', *args)
 
 
 @roller_shutters.route('/rolstavni/rolletnye-vorota')
@@ -47,7 +47,7 @@ def show_roller_gateway():
 
 @roller_shutters.route('/rolstavni/rolletnye-vorota', methods=["POST", "GET"])
 def requisition_rolletnye_vorota(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_roller_gateway', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_roller_gateway', link='rolletnye-vorota', *args)
 
 
 @roller_shutters.route('/rolstavni/rolstavni-s-photo')
@@ -58,7 +58,7 @@ def show_roll_with_photo():
 
 @roller_shutters.route('/rolstavni/rolstavni-s-photo', methods=["POST", "GET"])
 def requisition_photo(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_roll_with_photo', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_roll_with_photo', link='rolstavni-s-photo', *args)
 
 
 @roller_shutters.route('/rolstavni/rolletnye-boksy')
@@ -69,7 +69,7 @@ def show_roll_box():
 
 @roller_shutters.route('/rolstavni/rolletnye-boksy', methods=["POST", "GET"])
 def requisition_box(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_roll_box', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_roll_box', link='rolletnye-boksy', *args)
 
 
 @roller_shutters.route('/rolstavni/rolstavni-santekhnicheskie')
@@ -80,4 +80,4 @@ def show_plumbing_shutters():
 
 @roller_shutters.route('/rolstavni/rolstavni-santekhnicheskie', methods=["POST", "GET"])
 def requisition_santekhnicheskie(*args):
-    return helper_requisition(redirect_url='roller_shutters.show_plumbing_shutters', *args)
+    return helper_requisition(redirect_url='roller_shutters.show_plumbing_shutters', link='rolstavni-santekhnicheskie', *args)

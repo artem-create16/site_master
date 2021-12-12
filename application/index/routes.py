@@ -19,9 +19,15 @@ def index():
 
 @index_blueprint.route('/', methods=["POST", "GET"])
 def requisition(*args):
-    return helper_requisition(redirect_url='index.index', *args)
+    return helper_requisition(redirect_url='index.index', link='Главная страница', *args)
 
 
 @index_blueprint.route('/js/<path:path>')
 def send_js(path):
     return send_from_directory('js', path)
+
+
+@index_blueprint.route('/polzovatelskoe-soglashenie')
+@talisman()
+def assign():
+    return render_template('assign.html')
