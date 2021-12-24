@@ -435,16 +435,16 @@ header .wrapper {
 
 .social-groups a, .social-groups span {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     float: left;
     margin: 0 5px;
-    background: url(../static/img/social-buttons-small.png) no-repeat left top;
+    /*background: url(../static/img/Viber_icon-icons.com_66792.png) no-repeat left top;*/
     cursor: pointer;
 }
 
-a.vk-group, span.vk-group {
-    background-position: -31px 0;
+a.viber, span.viber {
+    /*background-position: -31px 0;*/
 }
 
 a.goo-group, span.goo-group {
@@ -1482,7 +1482,7 @@ h3 {
 .title-offers h2 {
     text-align: center;
     width: 100%;
-    margin-top: -60px;
+    margin-top: -30px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
@@ -1548,7 +1548,7 @@ h3 {
     }
 
     .title-offers h2 {
-        margin-top: -100px;
+        margin-top: -45px;
     }
 }
 

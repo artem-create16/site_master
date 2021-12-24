@@ -3,28 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../static/img/logo_mini.jpg">
-    <style>
-        .alert {
-            padding: 20px;
-            background-color: #44c42c;
-            color: white;
-        }
-
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .closebtn:hover {
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="../static/flash.css">
 </head>
 
 {% with messages = get_flashed_messages() %}
@@ -39,5 +18,4 @@
 {% endwith %}
 
 {% block content %}{% endblock %}
-
 </html>

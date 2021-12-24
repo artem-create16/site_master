@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-{% extends 'flash.html' %}
-
-
-{% block content %}
 <html lang="ru">
 <head>
     <meta charset="utf-8">
@@ -40,14 +36,14 @@
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(86830363, "init", {
+        ym(86893441, "init", {
             clickmap: true,
             trackLinks: true,
             accurateTrackBounce: true
         });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/86830363" style="position:absolute; left:-9999px;" alt=""/></div>
+        <div><img src="https://mc.yandex.ru/watch/86893441" style="position:absolute; left:-9999px;" alt=""/></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
     <style>:root {
@@ -56,6 +52,16 @@
 
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+    <strong>Спасибо за заявку!</strong> Мы обязательно с Вами свяжемся.
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
 <header>
     <div class='wrapper' style="position:relative;">
         <div class='logo'>
@@ -347,7 +353,8 @@
                         </a>
                     </div>
                     <div class='text-handler'>
-                        <div class="title"><h2><a href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a>
+                        <div class="title"><h2><a
+                                href="{{ url_for('roller_shutters.main_roller_shutters')}}">Рольставни</a>
                         </h2>
                         </div>
                         <p>Современное решение для защиты окон частных домов, магазинов, ларьков и других помещений от
@@ -378,7 +385,8 @@
                         <div class="title"><h2><a href="{{ url_for('gates.main_gates')}}">Ворота</a>
                         </h2>
                         </div>
-                        <p>Надежное, функциональное и эстетичное решение для организации въезда на территорию частного дома, промышленного объекта или гаража</p>
+                        <p>Надежное, функциональное и эстетичное решение для организации въезда на территорию частного
+                            дома, промышленного объекта или гаража</p>
                         <a href="{{ url_for('gates.show_gates_otkatnye') }}">Откатные ворота</a>
                         <br>
                         <a href="{{ url_for('roller_shutters.show_roller_gateway') }}">Роллетные ворота</a>
@@ -489,6 +497,16 @@
         </div>
     </section>
 </div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert2">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+    <strong>Спасибо за заявку!</strong> Мы обязательно с Вами свяжемся.
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
 <form action="" method="POST">
     {{ form.csrf_token }}
     <section class="offers">
@@ -523,7 +541,8 @@
                     <div class="card-info">
                         <p>Мы заботимся о вашей конфеденциальности. Ваши данные не будут пеереданы третьим лицам.
                             <br>
-                            Отправляя свои данные Вы соглашаетесь с <a href="{{ url_for('index.assign')}}">соглашением об обработке персональных
+                            Отправляя свои данные Вы соглашаетесь с <a href="{{ url_for('index.assign')}}">соглашением
+                                об обработке персональных
                                 данных</a></p>
                     </div>
                 </div>
@@ -547,13 +566,16 @@
         <div class="fi-row">
             <div class="col-md-4">
                 <div class='logo-footer'>
-                    <img src='../static/img/main_logo.jpg' alt='Мастер' width="200px" height="70.05px">
+                    <a href="{{ url_for('index.index')}}">
+                        <img src='../static/img/main_logo.jpg' alt='Мастер лого' width="200px" height="70.05px">
+                    </a>
                 </div>
                 <div class="social-groups">
-                    <a class="vk-group" rel="nofollow" href="#"></a>
-                    <a class="insta" rel="nofollow" href="#"></a>
+                    <a class="viber" rel="nofollow" href="#"><img alt='viber'
+                                                                  src='../static/img/Viber_icon-icons.com_66792.png'></a>
+                    <a class="insta" rel="nofollow" href="#"><img alt='whatsapp'
+                                                                  src='../static/img/Whatsapp_37229%20(1).png'></a>
                 </div>
-
             </div>
             <div class="col-md-4">
                 <div class='adress'>
@@ -584,4 +606,3 @@
 
 </body>
 </html>
-{% endblock %}
