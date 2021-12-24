@@ -18,7 +18,7 @@ def send_notification(name, number, email, link):
         recipients=[os.environ['ADMIN_EMAIL']]
     )
     msg.body = f"Дата: {date}\nИмя: {name}\nНомер: {number}\nПочта: {email}\nЗаявка со страницы: {link}"
-    # mail.send(msg)
+    mail.send(msg)
 
 
 def send_notification_calculator(place, kind, height, width, control, services, name, email, number):
@@ -33,7 +33,7 @@ def send_notification_calculator(place, kind, height, width, control, services, 
     msg.body = f"Дата: {date}\nИмя: {name}\nНомер: {number}\nПочта: {email}\n" \
                f"Место установки: {place}\nВид рольставни: {kind}\nВысота: {height}\nШирина: {width}\n" \
                f"Управление: {control}\nУслуги: {services}"
-    # mail.send(msg)
+    mail.send(msg)
 
 
 def requisition(redirect_url, link):
