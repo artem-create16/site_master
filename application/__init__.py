@@ -36,5 +36,5 @@ def init_app():
         app.register_blueprint(gates)
 
     mail.init_app(app)
-    talisman.init_app(app, content_security_policy={})
+    # talisman.init_app(app, content_security_policy={})
     return app
