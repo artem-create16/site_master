@@ -14,5 +14,5 @@ EXPOSE 5000
 
 #CMD ["gunicorn", "-b", "127.0.0.1:5000", "run:app"]
 #CMD gunicorn --bind 127.0.0.1:5000 run:app
-CMD gunicorn --bind 0.0.0.0:5000 run:app
+CMD gunicorn --bind 0.0.0.0:80 run:app
 #CMD ["python", "run.py"]

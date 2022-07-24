@@ -467,7 +467,7 @@ a.insta, span.insta {
     font: 500 15px/46px Roboto;
     position: absolute;
     top: 7px;
-    right: 5px;
+    right: -60px;
     text-decoration: none;
     color: #fff;
     padding: 0 20px;
@@ -504,11 +504,11 @@ a.insta, span.insta {
 }
 
 .phone-top {
-    margin: 10px 0 0 0;
+    margin: -13px 0 0 0;
     text-align: right;
     float: right;
     width: auto;
-    font: bold 14px Roboto;
+    font: bold 0px Roboto;
 }
 
 .phone-top .phone {
@@ -560,8 +560,8 @@ a.insta, span.insta {
 
     .order-top .call-calc {
         font: 500 14px/30px Roboto;
-        margin-right: 0px;
-        margin-top: -48px;
+        margin-right: 64px;
+        margin-top: -26px;
         width: 169px;
         margin-left: 150px;
     }
@@ -807,7 +807,7 @@ footer {
 
 .phone-footer-holder .fa {
     color: #248912;
-    padding-right: 5px;
+    padding-right: 0px;
 }
 
 .footer-info .button {
@@ -936,6 +936,8 @@ footer {
 
     .phone-top {
         top: 62px !important;
+        font: bold 15px Roboto;
+        margin: 0;
     }
 }
 
@@ -1292,11 +1294,12 @@ footer {
         position: absolute;
         width: 100%;
         text-align: right;
-        top: 1px;
+        /*top: 1px;*/
         right: 4px;
         padding: 15px;
-        margin: 0;
+        /*margin: 0;*/
         z-index: 100;
+        margin-top: -17px;
     }
 
     .content {
